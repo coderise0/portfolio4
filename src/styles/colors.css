@@ -1,0 +1,50 @@
+/* colors.css */
+
+/* -------------------------------------- */
+/* Global/Utility Colors */
+/* -------------------------------------- */
+:root {
+  /* Basic Grays for text, backgrounds, etc. */
+  --color-white: #ffffff;
+  --color-black: #000000;
+  --color-light-gray: #f8f8f8;
+  --color-gray: #cccccc;
+  --color-dark-gray: #333333;
+
+  /* Primary Accent Color (You can choose one dominant color for your brand) */
+  --color-primary-accent: #dc143c; /* Example: Taken from Image 1, a strong red */
+  --color-primary-text: var(--color-dark-gray);
+  --color-secondary-text: #555555;
+  --color-background: var(--color-white);
+}
+
+/* -------------------------------------- */
+/* Color Palette 1 (Red/Pink Tones) - From Image 1 */
+/* -------------------------------------- */
+:root {
+  --red-dark: #dc143c; /* rgb(220, 20, 60) */
+  --red-medium: #f75270; /* rgb(247, 82, 112) */
+  --pink-light: #f7cac9; /* rgb(247, 202, 201) */
+  --cream-light: #fdebd0; /* rgb(253, 235, 208) */
+}
+
+/* -------------------------------------- */
+/* Color Palette 2 (Earthy/Neutral Tones) - From Image 2 */
+/* -------------------------------------- */
+:root {
+  --beige-lightest: #f8ede3; /* rgb(248, 237, 227) - Calculated from hex */
+  --beige-light: #dfd3c3; /* rgb(223, 211, 195) */
+  --taupe-medium: #d0b8a8; /* rgb(208, 184, 168) */
+  --terracotta-dark: #c5705d; /* rgb(197, 112, 93) */
+}
+
+/* -------------------------------------- */
+/* Color Palette 3 (Blue/Cream Tones) - From Image 3 */
+/* -------------------------------------- */
+:root {
+  --cream-lightest: #f5efe6; /* rgb(245, 239, 230) */
+  --cream-medium: #e8dfca; /* rgb(232, 223, 202) */
+  --blue-medium: #6d94c5; /* rgb(109, 148, 197) */
+  --blue-light: #cbdceb; /* rgb(203, 220, 235) */
+}
+
