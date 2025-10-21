@@ -45,5 +45,18 @@
       "eslint --fix",
       "git add"
     ]
-  }
+  },
+  "description": "Getting started:",
+  "main": "eslint.config.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/coderise0/portfolio4.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/coderise0/portfolio4/issues"
+  },
+  "homepage": "https://github.com/coderise0/portfolio4#readme"
 }
