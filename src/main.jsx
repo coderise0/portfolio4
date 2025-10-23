@@ -6,10 +6,9 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { Testimonials } from './sections/Testimonials.jsx';
 import FooterSection from './sections/Footer.jsx';
 
-
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-   <Testimonials />
-   <FooterSection />
+    <Testimonials />
+    <FooterSection />
   </StrictMode>
 );

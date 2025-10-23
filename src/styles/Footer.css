@@ -1,6 +1,3 @@
-body {
-  overflow: hidden;
-}
 .footer {
   background-color: #f5efe6;
   color: #000000;
@@ -8,7 +5,7 @@ body {
   font-family: 'Arial', sans-serif;
   position: relative;
   bottom: -80px;
-  width: 160%;
+  width: 100%;
 }
 
 .footer-container {
@@ -66,15 +63,15 @@ body {
 
 .footer-columns {
   display: flex;
-  gap: 60px;
+  gap: 50px;
   flex-wrap: wrap;
 }
 
 .footer-columns .col {
   font-size: 16px;
   font-weight: 500;
-  margin-left: 7px;
   margin-bottom: 15px;
+  margin-right: -20px;
 }
 .footer-columns .col h6 {
   font-size: 16px;
@@ -104,12 +101,12 @@ body {
   font-weight: 400px;
 }
 
-.footer-bottom {
+.footer-bottom p {
   text-align: center;
   margin-top: 40px;
   border-top: 1px solid rgba(255, 255, 255, 0.3);
   padding-top: 80px;
-  font-size: 14px;
+  font-size: 15px;
 }
 
 .footer-bottom a {
