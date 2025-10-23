@@ -1,4 +1,0 @@
-# Default reviewers for src/
-src/ @yosraz ;
-# Code owners for the repo
-/* @your-org/frontend-team

@@ -1,0 +1,329 @@
+.experience-section {
+  text-align: left;
+  margin: 0;
+  padding: 0;
+}
+
+.timeline {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  row-gap: 0; /* no spacing between elements */
+}
+
+.timeline-line {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 12px; /* center bar thickness */
+  background: var(--color-dark-gray);
+  top: 0;
+  bottom: 0;
+  z-index: 0;
+}
+
+
+.intro {
+  max-width: 420px;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  z-index: 1;
+}
+
+.intro .eyebrow {
+  color: var(--color-secondary-text);
+  margin: 0 0 0 0;
+}
+
+.intro h2 {
+  margin: 0 0 0 0;
+  color: var(--color-primary-text);
+}
+
+.intro .subtitle {
+  color: var(--color-secondary-text);
+  margin: 0 0 0 0;
+}
+
+
+.headline-bar {
+  background: var(--color-dark-gray);
+  color: var(--color-white);
+  padding: 6px 10px;
+  border-radius: 2px;
+  font-weight: 600;
+  max-width: 440px;
+  position: relative;
+  margin: 0;
+  z-index: 1;
+}
+
+.timeline-row.left .headline-bar::after,
+.timeline-row.right .headline-bar::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--color-dark-gray);
+  z-index: 2;
+}
+
+.timeline-row.left .headline-bar::after { 
+  right: -6px; 
+}
+
+.timeline-row.right .headline-bar::before { 
+  left: -6px; 
+}
+
+.content-box {
+  background: transparent; /* no background */
+  padding: 0; /* no padding */
+  border-radius: 0; /* no border radius */
+  color: var(--color-primary-text);
+  max-width: 440px;
+  border: none; /* no border */
+  margin: 0;
+  display: block;
+  visibility: visible;
+}
+
+/* Remove default paragraph margins inside boxes */
+.content-box p { 
+  margin: 0; 
+  padding: 0;
+}
+
+/* Force no spacing between any elements */
+.timeline-row + .timeline-row { 
+  margin-top: 0; 
+}
+
+.intro + .timeline-row { 
+  margin-top: 0; 
+}
+
+/* Make all elements have no margins */
+.timeline-row.left .headline-bar,
+.timeline-row.right .headline-bar,
+.timeline-row.left .content-box,
+.timeline-row.right .content-box { 
+  margin: 0; 
+}
+
+/* Restore proper horizontal layout */
+.timeline-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px; /* proper horizontal gap from center line */
+  row-gap: 0; /* keep vertical spacing tight */
+  align-items: start;
+  margin: 0;
+  padding: 0;
+}
+
+.timeline-row.left .headline-bar { 
+  grid-column: 1 / span 1; 
+  justify-self: end; 
+  margin-right: 0;
+}
+
+.timeline-row.left .content-box { 
+  grid-column: 1 / span 1; 
+  justify-self: end; 
+  margin-right: 0;
+  background-color: gainsboro;
+  padding: 10px 20px;
+}
+
+.timeline-row.right .headline-bar { 
+  grid-column: 2 / span 1; 
+  justify-self: start; 
+  margin-left: 0;
+}
+
+.timeline-row.right .content-box { 
+  grid-column: 2 / span 1; 
+  justify-self: start; 
+  margin-left: 0;
+  background-color: gainsboro;
+  padding: 10px 20px;
+}
+
+/* Large screens (1200px and up) */
+@media (min-width: 1200px) {
+  .intro {
+    max-width: 500px;
+  }
+  
+  .headline-bar,
+  .content-box {
+    max-width: 500px;
+  }
+  
+  .timeline-row {
+    gap: 30px;
+  }
+  
+  /* Add spacing between headline-bar and content-box */
+  .timeline-row.left .content-box,
+  .timeline-row.right .content-box {
+    margin-top: -24px;
+    margin-bottom: 16px;
+  }
+}
+
+/* Medium screens (768px to 1199px) */
+@media (max-width: 1199px) and (min-width: 768px) {
+  .intro {
+    max-width: 400px;
+  }
+  
+  .headline-bar,
+  .content-box {
+    max-width: 400px;
+  }
+  
+  .timeline-row {
+    gap: 15px;
+  }
+  
+  .timeline-line {
+    width: 10px;
+  }
+  
+  .timeline-row.left .headline-bar::after,
+  .timeline-row.right .headline-bar::before {
+    width: 10px;
+    height: 10px;
+  }
+  
+  /* Add spacing between headline-bar and content-box */
+  .timeline-row.left .content-box,
+  .timeline-row.right .content-box {
+    margin-top: -6px;
+  }
+}
+
+/* Small screens (481px to 767px) */
+@media (max-width: 767px) and (min-width: 481px) {
+  .intro {
+    max-width: 100%;
+    padding: 0 20px;
+  }
+  
+  .headline-bar,
+  .content-box {
+    max-width: 100%;
+  }
+  
+  .timeline-row {
+    grid-template-columns: 1fr;
+    gap: 0;
+    padding: 0 20px;
+  }
+  
+  .timeline-line {
+    left: 30px;
+    transform: none;
+    width: 8px;
+  }
+  
+  .timeline-row.left .headline-bar,
+  .timeline-row.right .headline-bar,
+  .timeline-row.left .content-box,
+  .timeline-row.right .content-box {
+    grid-column: 1;
+    justify-self: start;
+    margin: 0;
+  }
+  
+  .timeline-row.left .headline-bar::after,
+  .timeline-row.right .headline-bar::before {
+    width: 8px;
+    height: 8px;
+  }
+  
+  .timeline-row.left .headline-bar::after {
+    right: auto;
+    left: -4px;
+  }
+  
+  .timeline-row.right .headline-bar::before {
+    left: -4px;
+  }
+}
+
+/* Extra small screens (480px and below) */
+@media (max-width: 480px) {
+  .intro {
+    max-width: 100%;
+    padding: 0 15px;
+  }
+  
+  .intro .eyebrow {
+    font-size: 14px;
+  }
+  
+  .intro h2 {
+    font-size: 24px;
+  }
+  
+  .intro .subtitle {
+    font-size: 14px;
+    line-height: 1.4;
+  }
+  
+  .headline-bar {
+    padding: 8px 12px;
+    font-size: 14px;
+    max-width: 100%;
+  }
+  
+  .content-box {
+    padding: 8px 12px;
+    max-width: 100%;
+  }
+  
+  .timeline-row {
+    grid-template-columns: 1fr;
+    gap: 0;
+    padding: 0 15px;
+  }
+  
+  .timeline-line {
+    left: 25px;
+    transform: none;
+    width: 6px;
+  }
+  
+  .timeline-row.left .headline-bar,
+  .timeline-row.right .headline-bar,
+  .timeline-row.left .content-box,
+  .timeline-row.right .content-box {
+    grid-column: 1;
+    justify-self: start;
+    margin: 0;
+  }
+  
+  .timeline-row.left .headline-bar::after,
+  .timeline-row.right .headline-bar::before {
+    width: 6px;
+    height: 6px;
+  }
+  
+  .timeline-row.left .headline-bar::after {
+    right: auto;
+    left: -3px;
+  }
+  
+  .timeline-row.right .headline-bar::before {
+    left: -3px;
+  }
+}
