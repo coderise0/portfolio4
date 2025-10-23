@@ -35,6 +35,7 @@
     "eslint-plugin-jsx-a11y": "^6.7.1",
     "eslint-plugin-react": "^7.37.5",
     "eslint-plugin-react-hooks": "^5.2.0",
+    "eslint-plugin-react-refresh": "^0.4.24",
     "globals": "^16.4.0",
     "husky": "^8.0.0",
     "lint-staged": "^14.0.0",
@@ -48,5 +49,18 @@
       "eslint --fix",
       "git add"
     ]
-  }
+  },
+  "description": "Getting started:",
+  "main": "eslint.config.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/coderise0/portfolio4.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/coderise0/portfolio4/issues"
+  },
+  "homepage": "https://github.com/coderise0/portfolio4#readme"
 }

@@ -5,6 +5,7 @@ import './App.css'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 import { motion } from 'framer-motion'
+import ContactForm from './sections/ContactForm'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -48,7 +49,13 @@ function App() {
           </motion.div>
         </section>
       </main>
+      <section >
+          <ContactForm/>
+      </section>
+    
+    
     </div>
+    
   )
 }
 
