@@ -1,0 +1,308 @@
+import React from 'react'
+import timelineItems from '../data/experience.json'
+
+// Custom timeline with CSS Grid - 3 columns layout
+// Left content (auto) | Center line (6px) | Right content (auto)
+
+export default function Experience() {
+  return (
+    <section className="experience-section" id="experience">
+      <div className="container">
+        
+        {/* Intro Section */}
+        <div className="intro">
+          <p className="eyebrow">Work Experience</p>
+          <h2>My work journey</h2>
+          <p className="subtitle">
+            Lorem ipsum dolor sit amet et delectus accommodare his consul copiosae legendos at vix ad
+            putent delectus delicata usu. Vidit dissentiunt eos cu eum an brute copiosae hendrerit.
+            Eos erant dolorum an. Per facer affert ut. Mei
+          </p>
+        </div>
+
+        {/* Timeline Grid - Split into 2 sections */}
+        <div className="timeline-container">
+          {/* Center line */}
+          <div className="center-line"></div>
+          
+          {/* Left section - Even indexed items (0,2,4,6...) */}
+          <div className="timeline-section left-section">
+            {timelineItems
+              .filter((item, index) => index % 2 === 0)
+              .map((item, index) => (
+                <div key={item.year + 'left'} className="timeline-item left-item">
+                  <div className="content-card">
+                    <h3>{item.title}</h3>
+                    <p>{item.text}</p>
+                  </div>
+                  <div className="timeline-circle">
+                    <span className="year">{item.year}</span>
+                  </div>
+                </div>
+              ))
+            }
+          </div>
+
+          {/* Right section - Odd indexed items (1,3,5,7...) */}
+          <div className="timeline-section right-section">
+            {timelineItems
+              .filter((item, index) => index % 2 === 1)
+              .map((item, index) => (
+                <div key={item.year + 'right'} className="timeline-item right-item">
+                  <div className="timeline-circle">
+                    <span className="year">{item.year}</span>
+                  </div>
+                  <div className="content-card">
+                    <h3>{item.title}</h3>
+                    <p>{item.text}</p>
+                  </div>
+                </div>
+              ))
+            }
+          </div>
+        </div>
+      </div>
+
+      <style jsx>{`
+        .experience-section {
+          padding: 80px 0;
+          background: #ffffff;
+        }
+
+        .container {
+          max-width: 1200px;
+          margin: 0 auto;
+          padding: 0 20px;
+        }
+
+        /* Intro Styles */
+        .intro {
+          max-width: 600px;
+          margin: 0 auto 80px auto;
+          text-align: center;
+          padding: 0 20px;
+        }
+
+        .eyebrow {
+          color: var(--color-secondary-text);
+          font-size: 14px;
+          text-transform: uppercase;
+          letter-spacing: 1px;
+          margin-bottom: 12px;
+          font-weight: 500;
+        }
+
+        .intro h2 {
+          font-size: 3rem;
+          font-weight: 700;
+          color: var(--color-primary-text);
+          margin-bottom: 20px;
+          line-height: 1.2;
+        }
+
+        .subtitle {
+          font-size: 18px;
+          line-height: 1.6;
+          color: var(--color-secondary-text);
+          margin: 0;
+        }
+
+        /* Timeline Grid Layout */
+        .timeline-grid {
+          display: grid;
+          grid-template-columns: 1fr auto 1fr;
+          align-items: center;
+          position: relative;
+          row-gap: 4px;
+          column-gap: 20px;
+        }
+
+        /* Center Line */
+        .center-line {
+          position: absolute;
+          left: 50%;
+          transform: translateX(-50%);
+          width: 3px;
+          height: calc(100% - 20px);
+          background: var(--color-dark-gray);
+          z-index: 1;
+          top: 10px;
+        }
+
+        /* Timeline Content Areas */
+        .timeline-content {
+          display: flex;
+          align-items: center;
+          min-height: 40px;
+          padding: 2px 0;
+        }
+
+        .timeline-content.left {
+          justify-content: flex-end;
+          text-align: right;
+          grid-column: 1;
+        }
+
+        .timeline-content.right {
+          justify-content: flex-start;
+          text-align: left;
+          grid-column: 3;
+        }
+
+        .timeline-content.empty {
+          /* Empty space when no content */
+        }
+
+        /* Content Cards */
+        .content-card {
+          background: #f8f9fa;
+          padding: 16px;
+          border-radius: 8px;
+          box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+          border: 1px solid #e9ecef;
+          max-width: 350px;
+          width: 100%;
+        }
+
+        .content-card h3 {
+          color: var(--color-primary-text);
+          font-size: 16px;
+          font-weight: 600;
+          margin: 0 0 8px 0;
+        }
+
+        .content-card p {
+          color: var(--color-primary-text);
+          font-size: 14px;
+          line-height: 1.5;
+          margin: 0;
+        }
+
+        /* Center Column with Circles */
+        .timeline-center {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          z-index: 2;
+          position: relative;
+          grid-column: 2;
+          padding: 2px 0;
+        }
+
+        .timeline-circle {
+          width: 45px;
+          height: 45px;
+          border-radius: 50%;
+          background: var(--color-dark-gray);
+          border: 3px solid white;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+          z-index: 3;
+        }
+
+        .year {
+          color: white;
+          font-size: 11px;
+          font-weight: bold;
+          line-height: 1;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+          .timeline-grid {
+            grid-template-columns: 50px 1fr;
+            column-gap: 12px;
+            row-gap: 6px;
+          }
+
+          .center-line {
+            left: 25px;
+            transform: translateX(-50%);
+            width: 2px;
+            height: calc(100% - 15px);
+            top: 8px;
+          }
+
+          .timeline-content.left,
+          .timeline-content.right {
+            grid-column: 2;
+            justify-content: flex-start;
+            text-align: left;
+            min-height: 35px;
+            padding: 1px 0;
+          }
+
+          .timeline-center {
+            grid-column: 1;
+            justify-content: center;
+            padding: 1px 0;
+          }
+
+          .timeline-circle {
+            width: 35px;
+            height: 35px;
+          }
+
+          .year {
+            font-size: 9px;
+          }
+
+          .content-card {
+            max-width: 100%;
+            padding: 12px;
+          }
+
+          .content-card h3 {
+            font-size: 15px;
+            margin-bottom: 6px;
+          }
+
+          .content-card p {
+            font-size: 13px;
+          }
+        }
+
+        @media (max-width: 480px) {
+          .intro h2 {
+            font-size: 2rem;
+          }
+
+          .subtitle {
+            font-size: 16px;
+          }
+
+          .timeline-grid {
+            column-gap: 10px;
+            row-gap: 4px;
+          }
+
+          .timeline-circle {
+            width: 30px;
+            height: 30px;
+          }
+
+          .year {
+            font-size: 8px;
+          }
+
+          .content-card {
+            padding: 10px;
+          }
+
+          .content-card h3 {
+            font-size: 14px;
+            margin-bottom: 4px;
+          }
+
+          .content-card p {
+            font-size: 12px;
+            line-height: 1.4;
+          }
+        }
+      `}</style>
+    </section>
+  )
+}
+
