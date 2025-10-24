@@ -4,9 +4,13 @@ import timelineItems from "../data/experience.json";
 // Custom timeline with separated left and right sections
 // Even indexed items (0,2,4...) on left, Odd indexed items (1,3,5...) on right
 
+
 export default function Experience() {
-  const [visibleItems, setVisibleItems] = useState(new Set());
-  const timelineRef = useRef(null);
+
+
+  const [visibleItems, setVisibleItems] = useState(new Set())
+  const timelineRef = useRef(null)
+
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -32,8 +36,10 @@ export default function Experience() {
   }, []);
 
   return (
-    <section id="experience" className="experience-section" id="experience">
-      <div className="container">
+
+    <section className="experience-section" id="experience">
+      <div className="container" style={{background: 'transparent'}}>
+
         {/* Intro Section */}
         <div className="intro animate-intro">
           <p className="eyebrow">Work Experience</p>
@@ -297,9 +303,9 @@ export default function Experience() {
 
         .experience-section .left-section {
           border-inline-end: 3px solid var(--red-dark);
-          align-items: flex-start;
+          align-items: flex-end;
           right: 0px;
-          padding-left: 0px;
+          padding-left: 60px;
         }
 
         .right-section {
@@ -672,3 +678,4 @@ export default function Experience() {
     </section>
   );
 }
+
