@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { projectImages } from '../assets/projectImages'
 
 export default function ProjectCard({ project }) {
   const [isFlipped, setIsFlipped] = useState(false)
@@ -14,7 +15,7 @@ export default function ProjectCard({ project }) {
         <div className="card-front">
           <div className="project-image">
             <img 
-              src={project.image || '/api/placeholder/300/200'} 
+              src={projectImages[project.id] || project.image || '/api/placeholder/300/200'} 
               alt={project.title}
               loading="lazy"
             />
@@ -71,9 +72,10 @@ export default function ProjectCard({ project }) {
       <style jsx>{`
         .project-card {
           width: 100%;
-          height: 350px;
+          height: 380px;
           perspective: 1000px;
           cursor: pointer;
+          
         }
 
         .card-inner {
@@ -83,22 +85,22 @@ export default function ProjectCard({ project }) {
           text-align: center;
           transition: transform 0.6s;
           transform-style: preserve-3d;
-        }
-
-        .card-inner.flipped {
-          transform: rotateY(180deg);
-        }
-
+          }
+          
+          .card-inner.flipped {
+            transform: rotateY(180deg);
+          }
+            
         .card-front,
         .card-back {
           position: absolute;
           width: 100%;
           height: 100%;
           backface-visibility: hidden;
-          border-radius: 12px;
+          border-radius: 1rem;
           box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-          background: white;
           overflow: hidden;
+          background: var(--terracotta-dark)
         }
 
         .card-back {
@@ -106,13 +108,14 @@ export default function ProjectCard({ project }) {
           padding: 20px;
           display: flex;
           flex-direction: column;
+          color: var(--color-white);
           justify-content: space-between;
         }
 
         /* Front Side Styles */
         .project-image {
           width: 100%;
-          height: 220px;
+          height: 280px;
           overflow: hidden;
           position: relative;
         }
@@ -127,19 +130,20 @@ export default function ProjectCard({ project }) {
         .project-info {
           padding: 20px;
           text-align: left;
+          
         }
 
         .project-title {
-          font-size: 1.4rem;
+          font-size: 1rem;
           font-weight: 600;
-          color: var(--color-primary-text);
+          color: var(--color-white);
           margin: 0 0 8px 0;
           line-height: 1.3;
         }
 
         .project-category {
           font-size: 0.9rem;
-          color: var(--color-secondary-text);
+          color: var(--color-light-gray);
           text-transform: uppercase;
           letter-spacing: 0.5px;
           margin: 0;
@@ -158,12 +162,13 @@ export default function ProjectCard({ project }) {
           font-size: 1.3rem;
           margin-bottom: 15px;
           text-align: center;
+          color: var(--color-white);
         }
 
         .project-description {
           font-size: 0.9rem;
           line-height: 1.5;
-          color: var(--color-primary-text);
+          color: var(--color-light-gray)
           margin-bottom: 20px;
           text-align: left;
           flex-grow: 1;
@@ -171,7 +176,7 @@ export default function ProjectCard({ project }) {
 
         .technologies h4 {
           font-size: 0.9rem;
-          color: var(--color-secondary-text);
+          color: var(--color-light-gray);
           margin: 0 0 10px 0;
           text-align: left;
           font-weight: 600;
@@ -212,12 +217,14 @@ export default function ProjectCard({ project }) {
         }
 
         .btn-primary {
-          background: var(--color-secondary-text);
-          color: white;
+          background: var(--beige-light);
+          border: 2px solid var(--red-dark);
+          color: var(--red-dark);
         }
 
         .btn-primary:hover {
-          background: var(--color-primary-text);
+          background: var(--red-dark);
+          color: var(--color-white);
           transform: translateY(-2px);
         }
 
@@ -229,7 +236,7 @@ export default function ProjectCard({ project }) {
 
         .btn-secondary:hover {
           background: var(--color-secondary-text);
-          color: white;
+          color: var(--color-white);
           transform: translateY(-2px);
         }
 

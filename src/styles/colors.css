@@ -7,7 +7,7 @@
   /* Basic Grays for text, backgrounds, etc. */
   --color-white: #ffffff;
   --color-black: #000000;
-  --color-light-gray: #f8f8f8;
+  --color-light-gray: #dedede;
   --color-gray: #cccccc;
   --color-dark-gray: #333333;
 
@@ -48,3 +48,14 @@
   --blue-light: #cbdceb; /* rgb(203, 220, 235) */
 }
 
+body {
+  background-color: var(--cream-lightest);
+}
+
+section.experience {
+  background-color: var(--beige-light);
+}
+
+section.projects {
+  background-color: var(--cream-medium);
+}

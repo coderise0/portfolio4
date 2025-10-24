@@ -6,6 +6,7 @@ import AOS from 'aos'
 import 'aos/dist/aos.css'
 import { motion } from 'framer-motion'
 import Experience from './sections/Experience'
+import Projects from './sections/Projects'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -16,32 +17,18 @@ function App() {
 
   return (
     <div className="app-root">
-      {/* <header className="logos">
-        <a href="https://vite.dev" target="_blank" rel="noreferrer">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank" rel="noreferrer">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </header> */}
+     
 
-      <main className="container" style={{ padding: 24 }}>
+      <main style={{ padding: 0 }}>
       
-        <section style={{ marginTop: 64 }}>
+        <section className='experience'>
           <Experience />
         </section>
-{/* 
-        <section style={{ marginTop: 40 }}>
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="p-4 border rounded"
-          >
-            <h3>Framer Motion example</h3>
-            <p>This box animates on mount using Framer Motion.</p>
-          </motion.div>
-        </section> */}
+
+        <section className='projects'>
+          <Projects />
+        </section>
+
       </main>
     </div>
   )

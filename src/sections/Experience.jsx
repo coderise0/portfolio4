@@ -159,7 +159,6 @@ export default function Experience() {
         /* Experience Section Styles */
         .experience-section {
           padding: 80px 0;
-          background: #e9e9e9ff;
         }
 
         .container {
@@ -204,26 +203,25 @@ export default function Experience() {
         }
 
         .eyebrow {
-          color: var(--color-secondary-text);
           font-size: 14px;
           text-transform: uppercase;
           letter-spacing: 1px;
           margin-bottom: 12px;
           font-weight: 500;
-        }
-
-        .intro h2 {
+          }
+          
+        .experience-section .intro h2 {
+          color: var(--red-dark);
           font-size: 3rem;
           font-weight: 700;
-          color: var(--color-primary-text);
           margin-bottom: 20px;
           line-height: 1.2;
         }
 
-        .subtitle {
+        .experience-section .subtitle {
           font-size: 18px;
           line-height: 1.6;
-          color: var(--color-secondary-text);
+          color: var(--red-medium);
           margin: 0;
         }
 
@@ -237,14 +235,14 @@ export default function Experience() {
         }
 
         /* Center Line */
-        .center-line {
+        .experience-section .center-line {
           position: absolute;
           left: 50%;
           display: none;
           transform: translateX(-50%);
           width: 3px;
           height: 100%;
-          background: var(--color-dark-gray);
+          background-color: var(--red-dark);
           z-index: 0; /* Reduced from 1 to 0 to be behind circles */
           top: 0;
         }
@@ -263,8 +261,8 @@ export default function Experience() {
           position: relative;
         }
 
-        .left-section {
-          border-inline-end: 3px solid var(--color-secondary-text);
+        .experience-section .left-section {
+          border-inline-end: 3px solid var(--red-dark);
           align-items: flex-start;
           right: 0px;
           padding-left: 0px;
@@ -322,7 +320,7 @@ export default function Experience() {
           width: 45px;
           height: 45px;
           border-radius: 50%;
-          background: var(--color-dark-gray);
+          background: var(--red-dark);
           border: 3px solid white;
           display: flex;
           align-items: center;
@@ -351,7 +349,7 @@ export default function Experience() {
         /* Arrow pointing left from left section circles */
         .left-item .timeline-circle::after {
           border-width: 8px 12px 8px 0;
-          border-color: transparent var(--color-dark-gray) transparent transparent;
+          border-color: transparent var(--red-dark) transparent transparent;
           left: -15px; /* 3px border + 12px arrow = 15px total offset */
           top: 50%;
           transform: translateY(-50%);
@@ -365,7 +363,7 @@ export default function Experience() {
         /* Arrow pointing right from right section circles */
         .right-item .timeline-circle::after {
           border-width: 8px 0 8px 12px;
-          border-color: transparent transparent transparent var(--color-dark-gray);
+          border-color: transparent transparent transparent var(--red-dark);
           right: -15px; /* 3px border + 12px arrow = 15px total offset */
           top: 50%;
           transform: translateY(-50%);
@@ -406,7 +404,7 @@ export default function Experience() {
         /* Arrow pointing toward left cards from their circles */
         .left-item .content-card::before {
           border-width: 10px 0 10px 15px;
-          border-color: transparent transparent transparent var(--color-secondary-text);
+          border-color: transparent transparent transparent var(--red-dark);
           right: -15px;
 
           top: 20px; /* Adjusted to align with circle position */
@@ -421,7 +419,7 @@ export default function Experience() {
         .right-item .content-card::before {
         content: '';
           border-width: 10px 15px 10px 0;
-          border-color: transparent var(--color-secondary-text) transparent transparent;
+          border-color: transparent var(--red-dark) transparent transparent;
           left: -15px;
           top: 20px; /* Adjusted to align with circle position */
         }
@@ -433,8 +431,8 @@ export default function Experience() {
         }
 
         .content-card h3 {
-          background: var(--color-secondary-text);
-          color: #ffffff;
+          background: var(--red-dark);
+          color: var(--color-white);
           font-size: 18px;
           font-weight: 600;
           margin: 0;
@@ -447,8 +445,8 @@ export default function Experience() {
         }
 
         .content-card .company {
-          background: var(--color-secondary-text);
-          color: #ffffff;
+          background: var(--red-dark);
+          color: var(--color-white);
           font-size: 12px;
           font-weight: 500;
           margin: 0;
@@ -485,13 +483,13 @@ export default function Experience() {
         }
 
         .content-card .skill-tag {
-          background: #f3f4f6;
-          color: #374151;
+          background: var(--beige-lightest);
+          color: var(--red-medium);
           padding: 4px 8px;
           border-radius: 6px;
           font-size: 11px;
           font-weight: 500;
-          border: 1px solid #e5e7eb;
+          border: 1px solid var(--pink-light);
         }
 
         /* Responsive Design */
