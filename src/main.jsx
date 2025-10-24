@@ -8,7 +8,7 @@ import Hero from "./sections/Hero";
 import AboutMe from "./sections/AboutMe";
 import Experience from "./sections/Experience";
 import Projects from "./sections/Projects";
-import { Testimonials } from "./sections/Testimonials.jsx";
+import Testimonials from "./sections/Testimonials.jsx";
 import ContactForm from "./sections/ContactForm";
 import FooterSection from "./sections/Footer.jsx";
 
