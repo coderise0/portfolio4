@@ -8,15 +8,18 @@
     "build": "vite build",
     "lint": "eslint \"src/**/*.{js,jsx}\" --max-warnings=0",
     "format": "prettier --write .",
-    "prepare": "husky install",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "prepare": "husky install"
   },
   "dependencies": {
     "aos": "^2.3.4",
     "bootstrap": "^5.3.8",
     "framer-motion": "^12.23.24",
     "react": "^19.1.1",
-    "react-dom": "^19.1.1"
+    "react-dom": "^19.1.1",
+"react-icons": "^5.5.0",
+    "react-rating-stars-component": "^2.2.0"
+
   },
   "devDependencies": {
     "@commitlint/cli": "^17.0.0",
@@ -30,11 +33,12 @@
     "eslint-config-prettier": "^8.7.0",
     "eslint-plugin-import": "^2.30.0",
     "eslint-plugin-jsx-a11y": "^6.7.1",
-    "eslint-plugin-react": "^7.32.2",
+    "eslint-plugin-react": "^7.37.5",
     "eslint-plugin-react-hooks": "^5.2.0",
+    "eslint-plugin-react-refresh": "^0.4.24",
     "globals": "^16.4.0",
     "husky": "^8.0.0",
-    "lint-staged": "^14.0.0",
+    "lint-staged": "^16.2.6",
     "postcss": "^8.5.6",
     "prettier": "^2.8.8",
     "vite": "^7.1.7"
@@ -42,8 +46,7 @@
   "lint-staged": {
     "src/**/*.{js,jsx,css,scss,md,json}": [
       "prettier --write",
-      "eslint --fix",
-      "git add"
+      "eslint --fix"
     ]
   },
   "description": "Getting started:",
