@@ -4,7 +4,9 @@ import timelineItems from '../data/experience.json'
 // Custom timeline with separated left and right sections
 // Even indexed items (0,2,4...) on left, Odd indexed items (1,3,5...) on right
 
-function Experience() {
+
+export default function Experience() {
+
   const [visibleItems, setVisibleItems] = useState(new Set())
   const timelineRef = useRef(null)
 
@@ -32,7 +34,9 @@ function Experience() {
 
   return (
     <section className="experience-section" id="experience">
+
       <div className="container" style={{background: 'transparent'}}>
+
         
         {/* Intro Section */}
         <div className="intro animate-intro">
@@ -263,10 +267,11 @@ function Experience() {
 
         .experience-section .left-section {
           border-inline-end: 3px solid var(--red-dark);
+
           align-items: flex-end;
           right: 0px;
           padding-left: 60px;
-        }
+
 
         .right-section {
           align-items: flex-start;
@@ -638,4 +643,4 @@ function Experience() {
     </section>
   )
 }
-export default Experience;
+

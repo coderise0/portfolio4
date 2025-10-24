@@ -1,6 +1,6 @@
-import '../styles/Footer.css';
-import logo from '../styles/Logo.jpg';
-import { FaLinkedin, FaGithub, FaTwitter } from 'react-icons/fa';
+import "../styles/Footer.css";
+import logo from "../styles/Logo.jpg";
+import { FaLinkedin, FaGithub, FaTwitter } from "react-icons/fa";
 
 function FooterSection() {
   return (
@@ -10,23 +10,35 @@ function FooterSection() {
           <img src={logo} alt="Logo" className="footer-logo" />
           <h4 className="footer-name">Khaled Alahmad</h4>
           <p className="footer-description">
-            Full Stack Developer passionate about building modern, clean, and high-performance web
-            apps.
+            Full Stack Developer passionate about building modern, clean, and
+            high-performance web apps.
           </p>
           <p className="footer-address">Address: Amman, Jordan</p>
           <ul className="social-links2">
             <li>
-              <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">
+              <a
+                href="https://www.linkedin.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <FaLinkedin />
               </a>
             </li>
             <li>
-              <a href="https://github.com/" target="_blank" rel="noopener noreferrer">
+              <a
+                href="https://github.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <FaGithub />
               </a>
             </li>
             <li>
-              <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer">
+              <a
+                href="https://twitter.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <FaTwitter />
               </a>
             </li>
@@ -62,17 +74,29 @@ function FooterSection() {
             <h6>Social Links</h6>
             <ul>
               <li>
-                <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">
+                <a
+                  href="https://www.linkedin.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   LinkedIn
                 </a>
               </li>
               <li>
-                <a href="https://github.com/" target="_blank" rel="noopener noreferrer">
+                <a
+                  href="https://github.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   GitHub
                 </a>
               </li>
               <li>
-                <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer">
+                <a
+                  href="https://twitter.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   Twitter
                 </a>
               </li>
@@ -95,8 +119,8 @@ function FooterSection() {
 
       <div className="footer-bottom">
         <p>
-          © 2025 Khaled Alahmad. All rights reserved. |<a href="#"> Privacy Policy</a> |
-          <a href="#"> Terms of Service</a>
+          © 2025 Khaled Alahmad. All rights reserved. |
+          <a href="#"> Privacy Policy</a> |<a href="#"> Terms of Service</a>
         </p>
       </div>
     </footer>

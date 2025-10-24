@@ -239,6 +239,10 @@ main .dis .div1 h1::after {
   animation: removeBorder 0.1s 3.5s forwards;
 }
 
+.read-the-docs {
+  color: #888;
+}
+
 @keyframes removeBorder {
   to {
     border-right: none;
