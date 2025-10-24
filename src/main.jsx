@@ -15,8 +15,8 @@ createRoot(document.getElementById("root")).render(
   <StrictMode>
     <Hero id="home" />
     <AboutMe id="about" />
-    <Projects id="projects" />
     <Experience id="experience" />
+    <Projects id="projects" />
     <Testimonials id="testimonials" />
     <ContactForm id="contact" />
     <Footer />
