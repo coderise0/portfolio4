@@ -65,7 +65,7 @@ export default function Projects() {
 
   return (
     <section className="portfolio-section" id="portfolio">
-      <div className="container">
+      <div className="container" style={{backgroundColor: 'transparent'}}>
         
         {/* Intro Section */}
         <div className="intro animate-intro">

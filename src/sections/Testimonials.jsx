@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import '../styles/Testimonisls.css';
 
-export function Testimonials() {
+export default function Testimonials() {
   const [testimonials, setTestimonials] = useState([]);
 
   useEffect(() => {

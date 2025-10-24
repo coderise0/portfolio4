@@ -5,7 +5,9 @@ import 'aos/dist/aos.css'
 import Hero from './sections/Hero'
 import Experience from './sections/Experience'
 import Projects from './sections/Projects'
-import ContactForm from './sections/ContactForm'
+import Footer from './sections/Footer'
+import Testimonials from './sections/Testimonials'
+
 
 function App() {
   useEffect(() => {
@@ -14,21 +16,7 @@ function App() {
 
   return (
     <div className="app-root">
-      <Hero />
-      
-      <main style={{ padding: 0 }}>
-        <section className='experience'>
-          <Experience />
-        </section>
-
-        <section className='projects'>
-          <Projects />
-        </section>
-      </main>
-
-      <section>
-        <ContactForm/>
-      </section>
+     
     </div>
   )
 }

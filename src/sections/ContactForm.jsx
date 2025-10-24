@@ -116,5 +116,4 @@ function ContactForm() {
     </div>
   );
 }
-
-export default ContactForm;
+export default ContactForm
