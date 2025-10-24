@@ -1,0 +1,31 @@
+[
+  {
+    "id": 1,
+    "name": "Lina Ahmad",
+     "specialization": "Product Manager",
+    "image": "https://randomuser.me/api/portraits/women/65.jpg",
+    "text": "The team was so professional and supportive throughout the whole process! Highly recommend working with them.",
+    "rating":4
+  
+  },
+  {
+    "id": 2,
+    "name": "Omar Khaled",
+     "specialization": "Project Coordinator",
+    "image": "https://randomuser.me/api/portraits/men/32.jpg",
+    "text": "Great experience! The website they built for us looks modern and runs super smoothly.",
+   "rating":5
+  },
+  {
+    "id": 3,
+    "name": "Rana Mahmoud",
+     "specialization": "Business Owner",
+     "image": "https://randomuser.me/api/portraits/women/68.jpg",
+    "text": "I’m really impressed by the attention to detail and the fast delivery. Thank you for the amazing work!",
+      "rating":5
+  }
+  
+
+
+
+]
