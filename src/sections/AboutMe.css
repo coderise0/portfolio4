@@ -1,0 +1,40 @@
+.section {
+  background-color: #cbdceb;
+  padding: 60px;
+  width: 100%;
+  height: auto;
+}
+
+h2 {
+  font-family: poppins;
+  font-size: 25px;
+  font-weight: 300;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.top-section {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+}
+
+.image {
+  width: 410px;
+  height: 300px;
+}
+
+.text,
+.bottom-paragraph,
+h3 {
+  font-family: nunito;
+  font-size: 21px;
+  font-weight: 300;
+  line-height: 160%;
+  text-align: justify;
+}
+
+.bottom-paragraph {
+  margin-top: 20px;
+  width: 105%;
+}
