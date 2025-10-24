@@ -18,8 +18,12 @@ createRoot(document.getElementById("root")).render(
 
     <Hero />
     <AboutMe />
-    <Experience />
-    <Projects />
+    <section className="experience">
+      <Experience />
+    </section>
+    <section className="projects">
+      <Projects />
+    </section>
     <Testimonials />
     <ContactForm />
     <FooterSection />

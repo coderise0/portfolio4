@@ -267,11 +267,10 @@ export default function Experience() {
 
         .experience-section .left-section {
           border-inline-end: 3px solid var(--red-dark);
-
           align-items: flex-end;
           right: 0px;
           padding-left: 60px;
-
+        }
 
         .right-section {
           align-items: flex-start;
