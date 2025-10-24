@@ -1,3 +1,13 @@
+import React from 'react';
+
+import Hero from './sections/Hero';
+
+function App() {
+  return (
+    <>
+      <Hero />
+    </>
+  );
 import { useEffect, useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
