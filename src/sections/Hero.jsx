@@ -3,7 +3,7 @@ import "../App.css";
 
 const Hero = () => {
   return (
-    <section className="herosection">
+    <section id="home" className="herosection">
       <header className="header">
         <h3>
           <img
@@ -15,27 +15,25 @@ const Hero = () => {
         <nav>
           <ul>
             <li>
-              <a href="">About me</a>
-            </li>
-
-            <li>
-              <a href="">skills</a>
-            </li>
-
-            <li>
-              <a href="">My project</a>
+              <a href="#hero">home</a>
             </li>
             <li>
-              <a href="">experience</a>
-            </li>
-
-            <li>
-              <a href="">Testimonials</a>
+              <a href="#about">About Me</a>
             </li>
             <li>
-              <a className="Contact" href="">
-                Contact
-              </a>
+              <a href="#skills">Skills</a>
+            </li>
+            <li>
+              <a href="#projects">My Projects</a>
+            </li>
+            <li>
+              <a href="#experience">Experience</a>
+            </li>
+            <li>
+              <a href="#testimonials">Testimonials</a>
+            </li>
+            <li>
+              <a href="#contact">Contact</a>
             </li>
           </ul>
         </nav>

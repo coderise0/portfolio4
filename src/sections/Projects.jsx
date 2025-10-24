@@ -1,87 +1,90 @@
-import React, { useEffect, useRef, useState, useMemo } from 'react'
-import ProjectCard from '../components/ProjectCard'
-import FilterBar from '../components/FilterBar'
-import projectsData from '../data/projects.json'
+import React, { useEffect, useRef, useState, useMemo } from "react";
+import ProjectCard from "../components/ProjectCard";
+import FilterBar from "../components/FilterBar";
+import projectsData from "../data/projects.json";
 
 export default function Projects() {
-  const [visibleItems, setVisibleItems] = useState(new Set())
-  const [activeCategory, setActiveCategory] = useState('All')
-  const [animationKey, setAnimationKey] = useState(0)
-  const portfolioRef = useRef(null)
+  const [visibleItems, setVisibleItems] = useState(new Set());
+  const [activeCategory, setActiveCategory] = useState("All");
+  const [animationKey, setAnimationKey] = useState(0);
+  const portfolioRef = useRef(null);
 
   // Get unique categories and project counts
   const { categories, projectCounts, filteredProjects } = useMemo(() => {
-    const cats = [...new Set(projectsData.map(project => project.category))].sort()
-    
+    const cats = [
+      ...new Set(projectsData.map((project) => project.category)),
+    ].sort();
+
     const counts = {
       total: projectsData.length,
       ...cats.reduce((acc, cat) => {
-        acc[cat] = projectsData.filter(p => p.category === cat).length
-        return acc
-      }, {})
-    }
+        acc[cat] = projectsData.filter((p) => p.category === cat).length;
+        return acc;
+      }, {}),
+    };
 
-    const filtered = activeCategory === 'All' 
-      ? projectsData 
-      : projectsData.filter(project => project.category === activeCategory)
+    const filtered =
+      activeCategory === "All"
+        ? projectsData
+        : projectsData.filter((project) => project.category === activeCategory);
 
     return {
       categories: cats,
       projectCounts: counts,
-      filteredProjects: filtered
-    }
-  }, [activeCategory])
+      filteredProjects: filtered,
+    };
+  }, [activeCategory]);
 
   // Handle category change
   const handleCategoryChange = (category) => {
     if (category !== activeCategory) {
-      setActiveCategory(category)
-      setVisibleItems(new Set()) // Reset visible items
-      setAnimationKey(prev => prev + 1) // Force re-animation
+      setActiveCategory(category);
+      setVisibleItems(new Set()); // Reset visible items
+      setAnimationKey((prev) => prev + 1); // Force re-animation
     }
-  }
+  };
 
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            const itemIndex = entry.target.dataset.index
-            setVisibleItems(prev => new Set(prev).add(itemIndex))
+            const itemIndex = entry.target.dataset.index;
+            setVisibleItems((prev) => new Set(prev).add(itemIndex));
           }
-        })
+        });
       },
       {
         threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px'
+        rootMargin: "0px 0px -50px 0px",
       }
-    )
+    );
 
-    const portfolioItems = portfolioRef.current?.querySelectorAll('.portfolio-item')
-    portfolioItems?.forEach((item) => observer.observe(item))
+    const portfolioItems =
+      portfolioRef.current?.querySelectorAll(".portfolio-item");
+    portfolioItems?.forEach((item) => observer.observe(item));
 
-    return () => observer.disconnect()
-  }, [filteredProjects, animationKey]) // Re-run when filtered projects change
+    return () => observer.disconnect();
+  }, [filteredProjects, animationKey]); // Re-run when filtered projects change
 
   return (
     <section className="portfolio-section" id="portfolio">
 
       <div className="container" style={{backgroundColor: 'transparent'}}>
-
-        
         {/* Intro Section */}
         <div className="intro animate-intro">
           <p className="eyebrow">My Work</p>
           <h2>Featured Projects</h2>
           <p className="subtitle">
-            A showcase of my software development journey, featuring diverse projects 
-            built with modern technologies and best practices. Each project represents 
-            a unique challenge and solution in the digital landscape.
+            A showcase of my software development journey, featuring diverse
+            projects built with modern technologies and best practices. Each
+            project represents a unique challenge and solution in the digital
+            landscape.
           </p>
         </div>
 
         {/* Filter Bar */}
-        <FilterBar 
+        <FilterBar
           categories={categories}
           activeCategory={activeCategory}
           onCategoryChange={handleCategoryChange}
@@ -91,26 +94,30 @@ export default function Projects() {
         {/* Projects Grid */}
         <div className="portfolio-grid" ref={portfolioRef} key={animationKey}>
           {filteredProjects.map((project, index) => {
-            const isVisible = visibleItems.has(index.toString())
+            const isVisible = visibleItems.has(index.toString());
             return (
-              <div 
-                key={`${project.id}-${activeCategory}`} 
-                className={`portfolio-item ${isVisible ? 'animate-in' : ''}`}
+              <div
+                key={`${project.id}-${activeCategory}`}
+                className={`portfolio-item ${isVisible ? "animate-in" : ""}`}
                 data-index={index}
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <ProjectCard project={project} />
               </div>
-            )
+            );
           })}
         </div>
 
         {/* Results Info */}
         <div className="results-info">
           <p>
-            Showing <strong>{filteredProjects.length}</strong> of <strong>{projectsData.length}</strong> projects
-            {activeCategory !== 'All' && (
-              <span> in <strong>{activeCategory}</strong></span>
+            Showing <strong>{filteredProjects.length}</strong> of{" "}
+            <strong>{projectsData.length}</strong> projects
+            {activeCategory !== "All" && (
+              <span>
+                {" "}
+                in <strong>{activeCategory}</strong>
+              </span>
             )}
           </p>
         </div>
@@ -120,11 +127,11 @@ export default function Projects() {
           <button className="btn-view-more">
             View All Projects
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-              <path 
-                d="M7 17L17 7M17 7H7M17 7V17" 
-                stroke="currentColor" 
-                strokeWidth="2" 
-                strokeLinecap="round" 
+              <path
+                d="M7 17L17 7M17 7H7M17 7V17"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
                 strokeLinejoin="round"
               />
             </svg>
@@ -141,15 +148,27 @@ export default function Projects() {
 
         /* Add subtle background pattern */
         .portfolio-section::before {
-          content: '';
+          content: "";
           position: absolute;
           top: 0;
           left: 0;
           right: 0;
           bottom: 0;
-          background-image: radial-gradient(circle at 20% 50%, rgba(120, 119, 198, 0.03) 0%, transparent 50%),
-                            radial-gradient(circle at 80% 20%, rgba(120, 119, 198, 0.03) 0%, transparent 50%),
-                            radial-gradient(circle at 40% 80%, rgba(120, 119, 198, 0.03) 0%, transparent 50%);
+          background-image: radial-gradient(
+              circle at 20% 50%,
+              rgba(120, 119, 198, 0.03) 0%,
+              transparent 50%
+            ),
+            radial-gradient(
+              circle at 80% 20%,
+              rgba(120, 119, 198, 0.03) 0%,
+              transparent 50%
+            ),
+            radial-gradient(
+              circle at 40% 80%,
+              rgba(120, 119, 198, 0.03) 0%,
+              transparent 50%
+            );
           pointer-events: none;
         }
 
@@ -362,5 +381,5 @@ export default function Projects() {
         }
       `}</style>
     </section>
-  )
+  );
 }

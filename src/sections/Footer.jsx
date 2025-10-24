@@ -50,7 +50,7 @@ function FooterSection() {
             <h6>Site Map</h6>
             <ul>
               <li>
-                <a href="#home">Home</a>
+                <a href="#hero">Home</a>
               </li>
               <li>
                 <a href="#about">About Me</a>

@@ -1,5 +1,5 @@
-﻿import React, { useEffect, useRef, useState } from 'react'
-import timelineItems from '../data/experience.json'
+﻿import React, { useEffect, useRef, useState } from "react";
+import timelineItems from "../data/experience.json";
 
 // Custom timeline with separated left and right sections
 // Even indexed items (0,2,4...) on left, Odd indexed items (1,3,5...) on right
@@ -7,45 +7,48 @@ import timelineItems from '../data/experience.json'
 
 export default function Experience() {
 
+
   const [visibleItems, setVisibleItems] = useState(new Set())
   const timelineRef = useRef(null)
+
 
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            const itemIndex = entry.target.dataset.index
-            setVisibleItems(prev => new Set(prev).add(itemIndex))
+            const itemIndex = entry.target.dataset.index;
+            setVisibleItems((prev) => new Set(prev).add(itemIndex));
           }
-        })
+        });
       },
       {
         threshold: 0.2,
-        rootMargin: '0px 0px -50px 0px'
+        rootMargin: "0px 0px -50px 0px",
       }
-    )
+    );
 
-    const timelineItems = timelineRef.current?.querySelectorAll('.timeline-item')
-    timelineItems?.forEach((item) => observer.observe(item))
+    const timelineItems =
+      timelineRef.current?.querySelectorAll(".timeline-item");
+    timelineItems?.forEach((item) => observer.observe(item));
 
-    return () => observer.disconnect()
-  }, [])
+    return () => observer.disconnect();
+  }, []);
 
   return (
-    <section className="experience-section" id="experience">
 
+    <section className="experience-section" id="experience">
       <div className="container" style={{background: 'transparent'}}>
 
-        
         {/* Intro Section */}
         <div className="intro animate-intro">
           <p className="eyebrow">Work Experience</p>
           <h2>My work journey</h2>
           <p className="subtitle">
-            Lorem ipsum dolor sit amet et delectus accommodare his consul copiosae legendos at vix ad
-            putent delectus delicata usu. Vidit dissentiunt eos cu eum an brute copiosae hendrerit.
-            Eos erant dolorum an. Per facer affert ut. Mei
+            Lorem ipsum dolor sit amet et delectus accommodare his consul
+            copiosae legendos at vix ad putent delectus delicata usu. Vidit
+            dissentiunt eos cu eum an brute copiosae hendrerit. Eos erant
+            dolorum an. Per facer affert ut. Mei
           </p>
         </div>
 
@@ -53,27 +56,37 @@ export default function Experience() {
         <div className="timeline-container" ref={timelineRef}>
           {/* Center line */}
           <div className="center-line"></div>
-          
+
           {/* Mobile: Combined timeline */}
           <div className="mobile-timeline">
             {timelineItems.map((item, index) => {
-              const isVisible = visibleItems.has(index.toString())
+              const isVisible = visibleItems.has(index.toString());
               return (
-                <div 
-                  key={item.year + 'mobile'} 
-                  className={`timeline-item mobile-item ${isVisible ? 'animate-in' : ''}`}
+                <div
+                  key={item.year + "mobile"}
+                  className={`timeline-item mobile-item ${
+                    isVisible ? "animate-in" : ""
+                  }`}
                   data-index={index}
                 >
                   <div className="content-card">
                     <h3>{item.title}</h3>
-                    <div className="company">{item.company || 'Company Name'}</div>
+                    <div className="company">
+                      {item.company || "Company Name"}
+                    </div>
                     <div className="card-body">
-                      <div className="duration">{item.duration || 'Jan 2023 - Present'}</div>
+                      <div className="duration">
+                        {item.duration || "Jan 2023 - Present"}
+                      </div>
                       <p>{item.text}</p>
                       <div className="skills">
-                        {(item.skills || ['React', 'Node.js', 'MongoDB']).map((skill, i) => (
-                          <span key={i} className="skill-tag">{skill}</span>
-                        ))}
+                        {(item.skills || ["React", "Node.js", "MongoDB"]).map(
+                          (skill, i) => (
+                            <span key={i} className="skill-tag">
+                              {skill}
+                            </span>
+                          )
+                        )}
                       </div>
                     </div>
                   </div>
@@ -81,42 +94,54 @@ export default function Experience() {
                     <span className="year">{item.year}</span>
                   </div>
                 </div>
-              )
+              );
             })}
           </div>
-          
+
           {/* Desktop: Left section - Even indexed items (0,2,4,6...) */}
           <div className="timeline-section left-section">
             {timelineItems
               .filter((item, index) => index % 2 === 0)
               .map((item, filteredIndex) => {
-                const originalIndex = timelineItems.findIndex(original => original.year === item.year)
-                const isVisible = visibleItems.has(originalIndex.toString())
+                const originalIndex = timelineItems.findIndex(
+                  (original) => original.year === item.year
+                );
+                const isVisible = visibleItems.has(originalIndex.toString());
                 return (
-                <div 
-                  key={item.year + 'left'} 
-                  className={`timeline-item left-item ${isVisible ? 'animate-in' : ''}`}
-                  data-index={originalIndex}
-                >
-                  <div className="content-card">
-                    <h3>{item.company || 'Company Name'}</h3>
-                    <div className="company">{item.title || 'Section Manager'}</div>
-                    <div className="card-body">
-                      <div className="duration">{item.duration || 'Jan 2023 - Present'}</div>
-                      <p>{item.text}</p>
-                      <div className="skills">
-                        {(item.skills || ['React', 'Node.js', 'MongoDB']).map((skill, i) => (
-                          <span key={i} className="skill-tag">{skill}</span>
-                        ))}
+                  <div
+                    key={item.year + "left"}
+                    className={`timeline-item left-item ${
+                      isVisible ? "animate-in" : ""
+                    }`}
+                    data-index={originalIndex}
+                  >
+                    <div className="content-card">
+                      <h3>{item.company || "Company Name"}</h3>
+                      <div className="company">
+                        {item.title || "Section Manager"}
+                      </div>
+                      <div className="card-body">
+                        <div className="duration">
+                          {item.duration || "Jan 2023 - Present"}
+                        </div>
+                        <p>{item.text}</p>
+                        <div className="skills">
+                          {(item.skills || ["React", "Node.js", "MongoDB"]).map(
+                            (skill, i) => (
+                              <span key={i} className="skill-tag">
+                                {skill}
+                              </span>
+                            )
+                          )}
+                        </div>
                       </div>
                     </div>
+                    <div className="timeline-circle">
+                      <span className="year">{item.year}</span>
+                    </div>
                   </div>
-                  <div className="timeline-circle">
-                    <span className="year">{item.year}</span>
-                  </div>
-                </div>
-              )})
-            }
+                );
+              })}
           </div>
 
           {/* Desktop: Right section - Odd indexed items (1,3,5,7...) */}
@@ -124,42 +149,53 @@ export default function Experience() {
             {timelineItems
               .filter((item, index) => index % 2 === 1)
               .map((item, filteredIndex) => {
-                const originalIndex = timelineItems.findIndex(original => original.year === item.year)
-                const isVisible = visibleItems.has(originalIndex.toString())
+                const originalIndex = timelineItems.findIndex(
+                  (original) => original.year === item.year
+                );
+                const isVisible = visibleItems.has(originalIndex.toString());
                 return (
-                <div 
-                  key={item.year + 'right'} 
-                  className={`timeline-item right-item ${isVisible ? 'animate-in' : ''}`}
-                  data-index={originalIndex}
-                >
-                  <div className="timeline-circle">
-                    <span className="year">{item.year}</span>
-                  </div>
-                  <div className="content-card">
-                    <h3>{item.company || 'Company Name'}</h3>
-                    <div className="company">{item.title || 'General Manager'}</div>
-                    <div className="card-body">
-                      <div className="duration">{item.duration || 'Jan 2023 - Present'}</div>
-                      <p>{item.text}</p>
-                      <div className="skills">
-                        {(item.skills || ['JavaScript', 'CSS', 'HTML']).map((skill, i) => (
-                          <span key={i} className="skill-tag">{skill}</span>
-                        ))}
+                  <div
+                    key={item.year + "right"}
+                    className={`timeline-item right-item ${
+                      isVisible ? "animate-in" : ""
+                    }`}
+                    data-index={originalIndex}
+                  >
+                    <div className="timeline-circle">
+                      <span className="year">{item.year}</span>
+                    </div>
+                    <div className="content-card">
+                      <h3>{item.company || "Company Name"}</h3>
+                      <div className="company">
+                        {item.title || "General Manager"}
+                      </div>
+                      <div className="card-body">
+                        <div className="duration">
+                          {item.duration || "Jan 2023 - Present"}
+                        </div>
+                        <p>{item.text}</p>
+                        <div className="skills">
+                          {(item.skills || ["JavaScript", "CSS", "HTML"]).map(
+                            (skill, i) => (
+                              <span key={i} className="skill-tag">
+                                {skill}
+                              </span>
+                            )
+                          )}
+                        </div>
                       </div>
                     </div>
                   </div>
-                </div>
-              )})
-            }
+                );
+              })}
           </div>
         </div>
       </div>
 
       <style jsx>{`
-
         main.container {
-        widtth: 88%
-          }
+          widtth: 88%;
+        }
         /* Experience Section Styles */
         .experience-section {
           padding: 80px 0;
@@ -212,8 +248,8 @@ export default function Experience() {
           letter-spacing: 1px;
           margin-bottom: 12px;
           font-weight: 500;
-          }
-          
+        }
+
         .experience-section .intro h2 {
           color: var(--red-dark);
           font-size: 3rem;
@@ -329,7 +365,7 @@ export default function Experience() {
           display: flex;
           align-items: center;
           justify-content: center;
-          box-shadow: 0 4px 12px rgba(0,0,0,0.25); /* Enhanced shadow for better elevation */
+          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25); /* Enhanced shadow for better elevation */
           z-index: 10; /* High enough to be above center line (z-index: 0) */
           flex-shrink: 0;
           position: absolute;
@@ -337,7 +373,7 @@ export default function Experience() {
 
         /* Arrow pointing to content from circles */
         .timeline-circle::after {
-          content: '';
+          content: "";
           position: absolute;
           width: 0;
           height: 0;
@@ -387,7 +423,7 @@ export default function Experience() {
           background: #ffffff;
           padding: 0;
           border-radius: 12px;
-          box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+          box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
           border: 1px solid #e5e7eb;
           max-width: 450px;
           width: calc(100% - 25px);
@@ -398,7 +434,7 @@ export default function Experience() {
         }
 
         .content-card::before {
-          content: '';
+          content: "";
           position: absolute;
           width: 0;
           height: 0;
@@ -421,7 +457,7 @@ export default function Experience() {
 
         /* Arrow pointing toward right cards from their circles */
         .right-item .content-card::before {
-        content: '';
+          content: "";
           border-width: 10px 15px 10px 0;
           border-color: transparent var(--red-dark) transparent transparent;
           left: -15px;
@@ -431,7 +467,7 @@ export default function Experience() {
         /* Hover effect */
         .timeline-item:hover .content-card {
           transform: translateY(-3px);
-          box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+          box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
         }
 
         .content-card h3 {
@@ -457,7 +493,7 @@ export default function Experience() {
           letter-spacing: 0.5px;
           padding: 4px 20px 8px;
           width: 100%;
-          border-bottom: 1px solid rgba(255,255,255,0.2);
+          border-bottom: 1px solid rgba(255, 255, 255, 0.2);
         }
 
         .content-card .card-body {
@@ -640,6 +676,6 @@ export default function Experience() {
         }
       `}</style>
     </section>
-  )
+  );
 }
 
