@@ -31,7 +31,10 @@ function ContactForm() {
   };
 
   return (
-    <div className="#f75270 min-h-screen flex justify-center items-center">
+    <div
+      id="contact"
+      className="#f75270 min-h-screen flex justify-center items-center"
+    >
       <form
         onSubmit={handleSubmit}
         className="card shadow p-4 w-100"

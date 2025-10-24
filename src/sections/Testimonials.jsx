@@ -12,7 +12,7 @@ export function Testimonials() {
   }, []);
 
   return (
-    <div className="container my-5">
+    <div id="testimonials" className="container my-5">
       <h5 className="text-center text-secondary">Happy Customers</h5>
       <h1 className="text-center mb-4">Testimonials</h1>
       <p className="text-center mb-5">
