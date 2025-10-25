@@ -38,3 +38,28 @@ h3 {
   margin-top: 20px;
   width: 105%;
 }
+
+@media (max-width: 768px) {
+  .top-section {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .image {
+    width: 90%;
+    height: auto;
+  }
+
+  .bottom-paragraph {
+    width: 100%;
+  }
+
+  .text {
+    font-size: 18px;
+  }
+
+  h3 {
+    font-size: 20px;
+  }
+}

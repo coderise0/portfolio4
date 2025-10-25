@@ -1,4 +1,5 @@
 import './AboutMe.css';
+import profilePic from '../assets/profilePic.jpg';
 
 function AboutMe() {
   return (
@@ -8,11 +9,7 @@ function AboutMe() {
       <div className="container">
         <div className="top-section">
           <div>
-            <img
-              src="https://img.freepik.com/free-photo/medium-shot-smiley-man-work_23-2149622834.jpg"
-              alt="Profile Picture"
-              className="image"
-            />
+            <img src={profilePic} alt="Profile Picture" className="image" />
             <p className="bottom-paragraph">
               Outside of development, I enjoy photography, digital art, and exploring new trends in
               web design to keep my skills up-to-date and inspired.
