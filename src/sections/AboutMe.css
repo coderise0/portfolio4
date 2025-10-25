@@ -82,7 +82,10 @@ h3 {
 
   .bottom-paragraph {
     order: 2;
-    margin-top: 20px;
+    margin-top: -20px;
+    margin-left: -38px;
+    font-size: 18px;
+    width: 113%;
   }
 
   .text {
@@ -91,6 +94,7 @@ h3 {
 
   h3 {
     font-size: 20px;
+    margin-top: 20px;
   }
 
   .image {
