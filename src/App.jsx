@@ -1,5 +1,8 @@
+import React from 'react';
 import './App.css';
-import AboutMe from './sections/AboutMe';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import ContactForm from './sections/ContactForm';
 
 function App() {
   return (
@@ -7,6 +10,9 @@ function App() {
       <main className="container" style={{ padding: 24 }}>
         <AboutMe />
       </main>
+      <section>
+        <ContactForm />
+      </section>
     </div>
   );
 }
