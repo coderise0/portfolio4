@@ -22,7 +22,7 @@ createRoot(document.getElementById("root")).render(
 
     <Hero />
     <AboutMe />
-    < SkillS/>
+    < Skills/>
     <section className="experience">
       <Experience />
     </section>

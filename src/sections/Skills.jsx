@@ -48,7 +48,7 @@ function Skills() {
   const bottomRowSkills = [...databaseSkills, ...databaseSkills];
 
   return (
-    <div className="skills-section">
+    <div  id="skills"className="skills-section">
       <h2 className="skills-title">Skills</h2>
       
       <div className="slider-container">
