@@ -1,9 +1,9 @@
-import React from 'react';
-import '../App.css';
+import React from "react";
+import "../App.css";
 
 const Hero = () => {
   return (
-    <section className="herosection">
+    <section id="home" className="herosection">
       <header className="header">
         <h3>
           <img
@@ -15,27 +15,25 @@ const Hero = () => {
         <nav>
           <ul>
             <li>
-              <a href="">About me</a>
-            </li>
-
-            <li>
-              <a href="">skills</a>
-            </li>
-
-            <li>
-              <a href="">My project</a>
+              <a href="#hero">home</a>
             </li>
             <li>
-              <a href="">experience</a>
-            </li>
-
-            <li>
-              <a href="">Testimonials</a>
+              <a href="#about">About Me</a>
             </li>
             <li>
-              <a className="Contact" href="">
-                Contact
-              </a>
+              <a href="#skills">Skills</a>
+            </li>
+            <li>
+              <a href="#projects">My Projects</a>
+            </li>
+            <li>
+              <a href="#experience">Experience</a>
+            </li>
+            <li>
+              <a href="#testimonials">Testimonials</a>
+            </li>
+            <li>
+              <a href="#contact">Contact</a>
             </li>
           </ul>
         </nav>
@@ -46,24 +44,33 @@ const Hero = () => {
           <div className="div1">
             <h1> Hi, I'm Khaled... </h1>
             <p>
-              highly motivated <span> Full Stack Web Developer</span> and experienced UI/UX
-              Designer. I currently work as a Freelancer while also contributing to a specialized
-              tech company. My passion lies in building modern, user-friendly web solutions that
-              bring creative ideas to life, achieved through a blend of clean code and aesthetic
-              design principles. My expertise covers both the Frontend, ensuring intuitive user
-              interaction and exceptional performance, and the Backend, where I focus on creating
-              robust and scalable infrastructures to deliver reliable speed and functionality.
+              highly motivated <span> Full Stack Web Developer</span> and
+              experienced UI/UX Designer. I currently work as a Freelancer while
+              also contributing to a specialized tech company. My passion lies
+              in building modern, user-friendly web solutions that bring
+              creative ideas to life, achieved through a blend of clean code and
+              aesthetic design principles. My expertise covers both the
+              Frontend, ensuring intuitive user interaction and exceptional
+              performance, and the Backend, where I focus on creating robust and
+              scalable infrastructures to deliver reliable speed and
+              functionality.
             </p>
 
             <button>
-              <a href="public/images.svg/full-stack-developer.png" download="Khaled_Ahmed_CV.pdf">
+              <a
+                href="public/images.svg/full-stack-developer.png"
+                download="Khaled_Ahmed_CV.pdf"
+              >
                 Download CV
               </a>
             </button>
           </div>
 
           <div className="div2">
-            <img src="public\images.svg\istockphoto-1399565382-612x612.png" alt="" />
+            <img
+              src="public\images.svg\istockphoto-1399565382-612x612.png"
+              alt=""
+            />
           </div>
         </div>
       </main>

@@ -85,7 +85,7 @@ a {
 }
 
 .herosection .header nav ul li a:not(.Contact)::before {
-  content: '';
+  content: "";
   position: absolute;
   bottom: 0;
   left: 50%;
@@ -119,13 +119,17 @@ a {
 }
 
 .herosection .header nav ul li .Contact::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: -100%;
   width: 100%;
   height: 100%;
-  background: linear-gradient(135deg, rgba(173, 147, 3, 0.849) 0%, #0b1d51 100%);
+  background: linear-gradient(
+    135deg,
+    rgba(173, 147, 3, 0.849) 0%,
+    #0b1d51 100%
+  );
   transition: left 0.4s ease;
   z-index: -1;
 }
@@ -231,8 +235,12 @@ main .dis .div1 h1 {
 }
 
 main .dis .div1 h1::after {
-  content: '';
+  content: "";
   animation: removeBorder 0.1s 3.5s forwards;
+}
+
+.read-the-docs {
+  color: #888;
 }
 
 @keyframes removeBorder {
@@ -243,7 +251,8 @@ main .dis .div1 h1::after {
 
 @media screen and (max-width: 768px) {
   main .dis .div1 h1 {
-    animation: typing 2.5s steps(30) 0.5s forwards, blink 0.75s step-end infinite;
+    animation: typing 2.5s steps(30) 0.5s forwards,
+      blink 0.75s step-end infinite;
   }
 }
 main .dis .div1 p {
@@ -324,9 +333,7 @@ main .dis .div1 button a {
 main .div2 img {
   height: 450px;
   width: 550px;
-
   object-fit: cover;
-
   margin-top: 100px;
 }
 
@@ -535,6 +542,6 @@ main .div2 img {
   }
 }
 
-.skills-header {
-  margin-top: 4rem;
+.read-the-docs {
+  color: #888;
 }

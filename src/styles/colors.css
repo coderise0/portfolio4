@@ -1,4 +1,7 @@
-/* colors.css */
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");/* colors.css */
 
 /* -------------------------------------- */
 /* Global/Utility Colors */
@@ -7,7 +10,7 @@
   /* Basic Grays for text, backgrounds, etc. */
   --color-white: #ffffff;
   --color-black: #000000;
-  --color-light-gray: #f8f8f8;
+  --color-light-gray: #dedede;
   --color-gray: #cccccc;
   --color-dark-gray: #333333;
 
@@ -48,16 +51,16 @@
   --blue-light: #cbdceb; /* rgb(203, 220, 235) */
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital, wght@0,400..900;1,400..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Poppins: ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0, 800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1, 800;1,900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Nunito:i tal,wght@0,200..1000;1,200..1000&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+
+
 :root {
   /*font type*/
-  --title-main: Playfair Display;
-  --title-sub: Poppins;
-  --body-text: Nunito;
-  --header-font: 'Bebas Neue', sans-serif;
+  --title-main: "Playfair Display", serif;
+  --title-sub: "Poppins", sans-serif;
+  --body-text: "Nunito", sans-serif;
+  --header-font: "Bebas Neue", sans-serif;
+
   /* font size */
   --fs-xl: 3rem;
   --fs-lg: 2rem;
@@ -65,3 +68,17 @@
   --fs-sm: 1rem;
   --fs-xs: 0.875rem;
 }
+
+  body {
+    background-color: var(--cream-lightest);
+  }
+
+  section.experience {
+    background-color: var(--beige-light);
+  }
+
+  section.projects {
+    background-color: var(--cream-medium);
+  }
+
+

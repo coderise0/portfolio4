@@ -1,0 +1,337 @@
+.experience-section {
+  text-align: left;
+  margin: 0;
+  padding: 0;
+}
+
+.timeline {
+  position: relative;
+  margin: 0;
+  padding: 40px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0; /* no spacing between elements for tight packing */
+}
+
+.timeline-line {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 4px; /* thinner center line */
+  background: var(--color-dark-gray);
+  top: 100px; /* start after intro */
+  bottom: 0;
+  z-index: 0;
+}
+
+.intro {
+  max-width: 500px;
+  margin: 0 auto 60px auto; /* center the intro and add bottom margin */
+  padding: 0 20px;
+  position: relative;
+  z-index: 1;
+  text-align: center; /* center align intro text */
+}
+
+.intro .eyebrow {
+  color: var(--color-secondary-text);
+  margin: 0 0 0 0;
+}
+
+.intro h2 {
+  margin: 0 0 0 0;
+  color: var(--color-primary-text);
+}
+
+.intro .subtitle {
+  color: var(--color-secondary-text);
+  margin: 0 0 0 0;
+}
+
+.headline-bar {
+  background: var(--color-dark-gray);
+  color: var(--color-white);
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-weight: 600;
+  max-width: 300px;
+  position: relative;
+  margin: 0;
+  z-index: 2;
+  display: inline-block;
+  font-size: 14px;
+}
+
+.timeline-row.left .headline-bar::after,
+.timeline-row.right .headline-bar::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--color-dark-gray);
+  border: 4px solid white;
+  z-index: 3;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.timeline-row.left .headline-bar::after {
+  right: -28px;
+}
+
+.timeline-row.right .headline-bar::before {
+  left: -28px;
+}
+
+.content-box {
+  background: transparent;
+  padding: 0;
+  border-radius: 0;
+  color: var(--color-primary-text);
+  max-width: 300px;
+  border: none;
+  margin: 0;
+  display: block;
+  visibility: visible;
+}
+
+/* Remove default paragraph margins inside boxes */
+.content-box p {
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
+} /* Force no spacing between any elements */
+.timeline-row + .timeline-row {
+  margin-top: 0;
+}
+
+.intro + .timeline-row {
+  margin-top: 0;
+}
+
+/* Make all elements have no margins */
+.timeline-row.left .headline-bar,
+.timeline-row.right .headline-bar,
+.timeline-row.left .content-box,
+.timeline-row.right .content-box {
+  margin: 0;
+}
+
+/* Timeline rows with automatic alternating layout */
+.timeline-row {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr; /* left content, center line space, right content */
+  gap: 40px; /* horizontal gap from center line */
+  align-items: start;
+  margin: 0 0 20px 0; /* consistent vertical spacing */
+  padding: 0 20px;
+  position: relative;
+}
+
+/* Left side items */
+.timeline-row.left .headline-bar {
+  grid-column: 1;
+  justify-self: end;
+  text-align: right;
+}
+
+.timeline-row.left .content-box {
+  grid-column: 1;
+  justify-self: end;
+  text-align: right;
+  background-color: #f8f9fa;
+  padding: 15px 20px;
+  border-radius: 8px;
+  margin-top: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Right side items */
+.timeline-row.right .headline-bar {
+  grid-column: 3;
+  justify-self: start;
+  text-align: left;
+}
+
+.timeline-row.right .content-box {
+  grid-column: 3;
+  justify-self: start;
+  text-align: left;
+  background-color: #f8f9fa;
+  padding: 15px 20px;
+  border-radius: 8px;
+  margin-top: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+} /* Large screens (1200px and up) */
+@media (min-width: 1200px) {
+  .intro {
+    max-width: 500px;
+  }
+
+  .headline-bar,
+  .content-box {
+    max-width: 500px;
+  }
+
+  .timeline-row {
+    gap: 30px;
+  }
+
+  /* Add spacing between headline-bar and content-box */
+  .timeline-row.left .content-box,
+  .timeline-row.right .content-box {
+    margin-top: -24px;
+    margin-bottom: 16px;
+  }
+}
+
+/* Medium screens (768px to 1199px) */
+@media (max-width: 1199px) and (min-width: 768px) {
+  .intro {
+    max-width: 400px;
+  }
+
+  .headline-bar,
+  .content-box {
+    max-width: 400px;
+  }
+
+  .timeline-row {
+    gap: 15px;
+  }
+
+  .timeline-line {
+    width: 10px;
+  }
+
+  .timeline-row.left .headline-bar::after,
+  .timeline-row.right .headline-bar::before {
+    width: 10px;
+    height: 10px;
+  }
+
+  /* Add spacing between headline-bar and content-box */
+  .timeline-row.left .content-box,
+  .timeline-row.right .content-box {
+    margin-top: -6px;
+  }
+}
+
+/* Small screens (481px to 767px) */
+@media (max-width: 767px) and (min-width: 481px) {
+  .intro {
+    max-width: 100%;
+    padding: 0 20px;
+  }
+
+  .headline-bar,
+  .content-box {
+    max-width: 100%;
+  }
+
+  .timeline-row {
+    grid-template-columns: 1fr;
+    gap: 0;
+    padding: 0 20px;
+  }
+
+  .timeline-line {
+    left: 30px;
+    transform: none;
+    width: 8px;
+  }
+
+  .timeline-row.left .headline-bar,
+  .timeline-row.right .headline-bar,
+  .timeline-row.left .content-box,
+  .timeline-row.right .content-box {
+    grid-column: 1;
+    justify-self: start;
+    margin: 0;
+  }
+
+  .timeline-row.left .headline-bar::after,
+  .timeline-row.right .headline-bar::before {
+    width: 8px;
+    height: 8px;
+  }
+
+  .timeline-row.left .headline-bar::after {
+    right: auto;
+    left: -4px;
+  }
+
+  .timeline-row.right .headline-bar::before {
+    left: -4px;
+  }
+}
+
+/* Extra small screens (480px and below) */
+@media (max-width: 480px) {
+  .intro {
+    max-width: 100%;
+    padding: 0 15px;
+  }
+
+  .intro .eyebrow {
+    font-size: 14px;
+  }
+
+  .intro h2 {
+    font-size: 24px;
+  }
+
+  .intro .subtitle {
+    font-size: 14px;
+    line-height: 1.4;
+  }
+
+  .headline-bar {
+    padding: 8px 12px;
+    font-size: 14px;
+    max-width: 100%;
+  }
+
+  .content-box {
+    padding: 8px 12px;
+    max-width: 100%;
+  }
+
+  .timeline-row {
+    grid-template-columns: 1fr;
+    gap: 0;
+    padding: 0 15px;
+  }
+
+  .timeline-line {
+    left: 25px;
+    transform: none;
+    width: 6px;
+  }
+
+  .timeline-row.left .headline-bar,
+  .timeline-row.right .headline-bar,
+  .timeline-row.left .content-box,
+  .timeline-row.right .content-box {
+    grid-column: 1;
+    justify-self: start;
+    margin: 0;
+  }
+
+  .timeline-row.left .headline-bar::after,
+  .timeline-row.right .headline-bar::before {
+    width: 6px;
+    height: 6px;
+  }
+
+  .timeline-row.left .headline-bar::after {
+    right: auto;
+    left: -3px;
+  }
+
+  .timeline-row.right .headline-bar::before {
+    left: -3px;
+  }
+}

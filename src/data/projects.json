@@ -1,0 +1,164 @@
+[
+  {
+    "id": 1,
+    "title": "E-commerce Platform",
+    "category": "Web Application",
+    "description": "A full-stack e-commerce platform with shopping cart, payment integration, admin dashboard, and user management. Features include product catalog, order tracking, and inventory management.",
+    "technologies": ["React", "Node.js", "MongoDB", "Stripe", "JWT"],
+    "demoUrl": "https://ecommerce-demo.com",
+    "githubUrl": "https://github.com/user/ecommerce-platform"
+  },
+  {
+    "id": 2,
+    "title": "Task Management App",
+    "category": "Web Application",
+    "description": "A collaborative task management application with real-time updates, team collaboration features, file attachments, and progress tracking. Built with modern web technologies.",
+    "technologies": ["Vue.js", "Firebase", "Vuetify", "PWA"],
+    "demoUrl": "https://taskapp-demo.com",
+    "githubUrl": "https://github.com/user/task-manager"
+  },
+  {
+    "id": 3,
+    "title": "Weather Dashboard",
+    "category": "Web Application",
+    "description": "Interactive weather dashboard displaying current conditions, forecasts, and historical data with beautiful charts and animations. Includes location-based weather alerts.",
+    "technologies": ["React", "D3.js", "Weather API", "Chart.js"],
+    "demoUrl": "https://weather-dashboard-demo.com",
+    "githubUrl": "https://github.com/user/weather-dashboard"
+  },
+  {
+    "id": 4,
+    "title": "Fitness Tracker Mobile App",
+    "category": "Mobile Application",
+    "description": "Cross-platform mobile app for fitness tracking with workout plans, nutrition logging, progress analytics, and social features. Includes integration with wearable devices.",
+    "technologies": ["React Native", "Firebase", "Redux", "HealthKit"],
+    "demoUrl": "https://fitness-app-demo.com",
+    "githubUrl": "https://github.com/user/fitness-tracker"
+  },
+  {
+    "id": 5,
+    "title": "Learning Management System",
+    "category": "Web Application",
+    "description": "Complete LMS with course creation, student enrollment, progress tracking, quizzes, and certification. Supports multimedia content and interactive learning modules.",
+    "technologies": ["Laravel", "Vue.js", "MySQL", "FFmpeg", "AWS S3"],
+    "demoUrl": "https://lms-demo.com",
+    "githubUrl": "https://github.com/user/learning-management"
+  },
+  {
+    "id": 6,
+    "title": "Banking Mobile App",
+    "category": "Mobile Application",
+    "description": "Secure mobile banking application with account management, money transfers, bill payments, and investment tracking. Features biometric authentication and fraud detection.",
+    "technologies": ["Flutter", "Dart", "SQLite", "Biometrics", "Encryption"],
+    "demoUrl": "https://banking-app-demo.com",
+    "githubUrl": "https://github.com/user/banking-app"
+  },
+  {
+    "id": 7,
+    "title": "Healthcare Management",
+    "category": "Web Application",
+    "description": "Digital healthcare platform for appointment scheduling, patient records, telemedicine consultations, and prescription management with HIPAA compliance.",
+    "technologies": ["React", "Express.js", "MongoDB", "Socket.io", "WebRTC"],
+    "demoUrl": "https://healthcare-demo.com",
+    "githubUrl": "https://github.com/user/healthcare-system"
+  },
+  {
+    "id": 8,
+    "title": "Inventory Management Desktop",
+    "category": "Desktop Application",
+    "description": "Cross-platform desktop application for warehouse inventory management with barcode scanning, reporting, and real-time stock tracking.",
+    "technologies": ["Electron", "React", "SQLite", "Node.js", "Barcode"],
+    "demoUrl": "https://inventory-demo.com",
+    "githubUrl": "https://github.com/user/inventory-desktop"
+  },
+  {
+    "id": 9,
+    "title": "Restaurant Ordering System",
+    "category": "Mobile Application",
+    "description": "Complete restaurant management system with online ordering, table reservations, menu management, kitchen display system, and payment processing.",
+    "technologies": ["Flutter", "Dart", "Firebase", "Stripe", "QR Codes"],
+    "demoUrl": "https://restaurant-demo.com",
+    "githubUrl": "https://github.com/user/restaurant-system"
+  },
+  {
+    "id": 10,
+    "title": "RESTful API Gateway",
+    "category": "API Development",
+    "description": "Scalable API gateway with authentication, rate limiting, load balancing, and microservices orchestration. Includes comprehensive documentation and monitoring.",
+    "technologies": ["Node.js", "Express", "Redis", "JWT", "Swagger"],
+    "demoUrl": "https://api-gateway-demo.com",
+    "githubUrl": "https://github.com/user/api-gateway"
+  },
+  {
+    "id": 11,
+    "title": "Social Media Analytics",
+    "category": "Web Application",
+    "description": "Comprehensive social media analytics platform that tracks engagement, audience insights, and performance metrics across multiple social networks with automated reporting.",
+    "technologies": ["Python", "Django", "PostgreSQL", "Celery", "Redis"],
+    "demoUrl": "https://analytics-demo.com",
+    "githubUrl": "https://github.com/user/social-analytics"
+  },
+  {
+    "id": 12,
+    "title": "Photo Editor Desktop",
+    "category": "Desktop Application",
+    "description": "Professional photo editing software with advanced filters, layer management, and AI-powered enhancement tools. Cross-platform desktop application.",
+    "technologies": ["C++", "Qt", "OpenCV", "Python", "AI/ML"],
+    "demoUrl": "https://photo-editor-demo.com",
+    "githubUrl": "https://github.com/user/photo-editor"
+  },
+  {
+    "id": 13,
+    "title": "Travel Booking App",
+    "category": "Mobile Application",
+    "description": "Comprehensive travel booking application with flight search, hotel reservations, itinerary planning, and local recommendations. Supports offline mode.",
+    "technologies": ["React Native", "Redux", "Maps API", "Payment Gateway"],
+    "demoUrl": "https://travel-app-demo.com",
+    "githubUrl": "https://github.com/user/travel-booking"
+  },
+  {
+    "id": 14,
+    "title": "Microservices Architecture",
+    "category": "API Development",
+    "description": "Distributed microservices architecture with Docker containers, Kubernetes orchestration, service mesh, and comprehensive monitoring solution.",
+    "technologies": ["Docker", "Kubernetes", "Go", "gRPC", "Prometheus"],
+    "demoUrl": "https://microservices-demo.com",
+    "githubUrl": "https://github.com/user/microservices"
+  },
+  {
+    "id": 15,
+    "title": "Real Estate Portal",
+    "category": "Web Application",
+    "description": "Modern real estate platform with property listings, advanced search filters, virtual tours, mortgage calculator, and agent management system.",
+    "technologies": ["Next.js", "Prisma", "PostgreSQL", "Mapbox", "Cloudinary"],
+    "demoUrl": "https://realestate-demo.com",
+    "githubUrl": "https://github.com/user/real-estate-portal"
+  },
+  {
+    "id": 16,
+    "title": "Music Production Suite",
+    "category": "Desktop Application",
+    "description": "Digital Audio Workstation (DAW) with multi-track recording, MIDI support, virtual instruments, and professional audio effects processing.",
+    "technologies": ["C++", "JUCE", "VST", "Audio Processing", "MIDI"],
+    "demoUrl": "https://music-suite-demo.com",
+    "githubUrl": "https://github.com/user/music-production"
+  },
+  {
+    "id": 17,
+    "title": "Blockchain Wallet",
+    "category": "Mobile Application",
+    "description": "Secure cryptocurrency wallet with multi-currency support, DeFi integration, NFT marketplace, and advanced security features including hardware wallet support.",
+    "technologies": ["React Native", "Web3", "Blockchain", "Biometrics"],
+    "demoUrl": "https://crypto-wallet-demo.com",
+    "githubUrl": "https://github.com/user/blockchain-wallet"
+  },
+  {
+    "id": 18,
+    "title": "GraphQL API Server",
+    "category": "API Development",
+    "description": "High-performance GraphQL API server with real-time subscriptions, caching, authentication, and comprehensive testing suite. Optimized for scalability.",
+    "technologies": ["GraphQL", "Apollo", "TypeScript", "PostgreSQL", "Redis"],
+    "demoUrl": "https://graphql-demo.com",
+    "githubUrl": "https://github.com/user/graphql-server"
+  }
+]

@@ -1,0 +1,110 @@
+[
+  {
+    "year": "2025",
+    "title": "Launch of AI-Driven Healthcare Platform",
+    "company": "Innovate Health Solutions",
+    "duration": "Jan 2025 to Present",
+    "text": "Spearheaded the development and launch of a cutting-edge AI platform, reducing diagnostic errors by 15% and increasing patient throughput.",
+    "skills": [ "AI/ML", "Python", "Cloud Architecture (AWS)", "Healthcare Compliance" ],
+    "side": "right"
+  },
+  {
+    "year": "2024",
+    "title": "Achieved Principal Engineer Promotion",
+    "company": "Tech Global Corp",
+    "duration": "Feb 2024 to Dec 2024",
+    "text": "Recognized for driving technical excellence and mentoring a team of 10 junior and mid-level software engineers across multiple critical projects.",
+    "skills": [ "System Design", "Mentorship", "Technical Leadership", "Performance Optimization" ],
+    "side": "left"
+  },
+  {
+    "year": "2023",
+    "title": "Lead Architect for Global Migration Project",
+    "company": "Tech Global Corp",
+    "duration": "Jun 2022 to Jan 2024",
+    "text": "Successfully led the migration of all legacy services from on-premise data centers to a fully serverless cloud infrastructure (Azure).",
+    "skills": [ "Azure DevOps", "Serverless Computing", "Microservices", "Project Management" ],
+    "side": "right"
+  },
+  {
+    "year": "2022",
+    "title": "Development of Scalable E-commerce API",
+    "company": "Retail Dynamics Inc.",
+    "duration": "Apr 2021 to May 2022",
+    "text": "Designed and implemented a high-volume, low-latency e-commerce API using Node.js and MongoDB, handling over 1 million transactions daily.",
+    "skills": [ "Node.js", "Express.js", "MongoDB", "REACT.JS", "Load Balancing", "CI/CD" ],
+    "side": "left"
+  },
+  {
+    "year": "2021",
+    "title": "Certification in Advanced Data Analytics",
+    "company": "Freelance Consultant",
+    "duration": "Sep 2021 to Nov 2021",
+    "text": "Completed intensive training focused on big data processing, visualization, and advanced statistical modeling techniques using R and Tableau.",
+    "skills": [ "Data Analysis", "Tableau", "R Programming", "Statistical Modeling" ],
+    "side": "right"
+  },
+  {
+    "year": "2020",
+    "title": "Led Team for Mobile App Redesign",
+    "company": "Mobile Solutions Co.",
+    "duration": "Jan 2019 to Mar 2021",
+    "text": "Managed a 5-person team to completely redesign and re-launch the flagship mobile application, resulting in a 30% increase in user engagement.",
+    "skills": [ "React Native", "Agile/Scrum", "UX/UI Design", "Team Management" ],
+    "side": "left"
+  },
+  {
+    "year": "2019",
+    "title": "Implementation of CI/CD Pipeline",
+    "company": "Mobile Solutions Co.",
+    "duration": "May 2018 to Dec 2018",
+    "text": "Introduced and standardized the use of Jenkins and Docker for continuous integration and deployment, cutting deployment time from hours to minutes.",
+    "skills": [ "DevOps", "Jenkins", "Docker", "Bash Scripting", "Version Control (Git)" ],
+    "side": "right"
+  },
+  {
+    "year": "2018",
+    "title": "Joined as Software Developer",
+    "company": "Mobile Solutions Co.",
+    "duration": "Jan 2018 to Apr 2018",
+    "text": "Began professional career focusing on front-end development using foundational web technologies and responsive design principles.",
+    "skills": [ "HTML5", "CSS3", "JavaScript (ES6)", "Bootstrap", "Responsive Design" ],
+    "side": "left"
+  },
+  {
+    "year": "2017",
+    "title": "Completed Master's Degree",
+    "company": "University of Technology",
+    "duration": "Sep 2015 to Jun 2017",
+    "text": "Obtained a Master's of Science in Computer Engineering, with a thesis focused on machine learning algorithms for pattern recognition.",
+    "skills": [ "Academic Research", "Machine Learning", "C++", "Algorithm Design" ],
+    "side": "right"
+  },
+  {
+    "year": "2016",
+    "title": "Internship at Research Lab",
+    "company": "National Research Center",
+    "duration": "Jul 2016 to Sep 2016",
+    "text": "Contributed to a government-funded project involving embedded systems programming and real-time data collection from sensors.",
+    "skills": [ "Embedded Systems", "C Programming", "Real-Time OS", "Hardware Interfacing" ],
+    "side": "left"
+  },
+  {
+    "year": "2015",
+    "title": "Graduated with Bachelor's Degree",
+    "company": "Local Community College",
+    "duration": "Sep 2011 to Jun 2015",
+    "text": "Received a Bachelor's Degree in Computer Science with Honors. Focus on data structures and object-oriented programming.",
+    "skills": [ "Java", "Data Structures", "OOP", "SQL" ],
+    "side": "right"
+  },
+  {
+    "year": "2014",
+    "title": "First Programming Competition Win",
+    "company": "Student Group",
+    "duration": "May 2014",
+    "text": "Won the local university-level programming challenge, solving complex algorithmic problems under time pressure.",
+    "skills": [ "Problem Solving", "Competitive Programming", "Algorithms", "System Design"],
+    "side": "left"
+  }
+]
