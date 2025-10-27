@@ -50,7 +50,11 @@ function Skills() {
   return (
     <div  id="skills"className="skills-section">
       <h2 className="skills-title">Skills</h2>
-      
+      <p className="skills-description">
+        Continuously expanding my toolkit — mastering modern frameworks,
+        libraries, and design tools to create seamless digital experiences.
+       </p>
+
       <div className="slider-container">
         {/* Top Row - JS Skills */}
         <div className="slider-track top-row">

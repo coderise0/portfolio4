@@ -50,7 +50,7 @@ function FooterSection() {
             <h6>Site Map</h6>
             <ul>
               <li>
-                <a href="#hero">Home</a>
+                <a href="">Home</a>
               </li>
               <li>
                 <a href="#about">About Me</a>
@@ -107,10 +107,10 @@ function FooterSection() {
             <h6>Legal</h6>
             <ul>
               <li>
-                <a href="#"> Privacy Policy</a>
+                <a href="-"> Privacy Policy</a>
               </li>
               <li>
-                <a href="#">Terms of Service</a>
+                <a href="">Terms of Service</a>
               </li>
             </ul>
           </div>

@@ -1,5 +1,5 @@
 .skills-section {
-  background-color: #cbdceb;
+  background-color: white;
   min-height: 40vh;
   padding: 60px 0;
   display: flex;
@@ -16,12 +16,35 @@
 }
 .skills-title {
   color: #6d94c5;
-  font-size: 48px;
+  font-family: 'Playfair Display', serif;
+  font-size: 3rem;
   font-weight: 700;
   margin-bottom: 60px;
   text-align: center;
   width: 100%;
 }
+
+
+.skills-description {
+  font-family: 'Nunito', sans-serif;
+  font-size: 1.25rem;
+  color: #444;
+  text-align: center;
+  max-width: 700px;
+  margin: -30px auto 60px auto;
+  line-height: 1.6;
+  font-weight: 300;
+  opacity: 0.9;
+}
+
+@media (max-width: 768px) {
+  .skills-description {
+    font-size: 1rem;
+    max-width: 90%;
+    margin: -20px auto 40px auto;
+  }
+}
+
 /* Slider Container - Full width */
 .slider-container {
   width: 100vw; /* Full viewport width */
@@ -94,7 +117,7 @@
 .skill-icon {
   width: 80px;
   height: 80px;
-  border-radius: 12px;
+  border-radius: 40px;
   display: flex;
   align-items: center;
   justify-content: center;

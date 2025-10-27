@@ -195,17 +195,20 @@ export default function Experience() {
       <style jsx>{`
         main.container {
           widtth: 88%;
+          
         }
         /* Experience Section Styles */
         .experience-section {
           padding: 80px 0;
+          background:#dedede;
         }
 
         .container {
           max-width: 1200px; /* Reduced from 1300px */
           width: 90%; /* Increased to 90% for more space */
           margin: 0 auto;
-          padding: 0 20px;
+           padding: 0 60px;
+           
         }
 
         /* Mobile first approach */
@@ -244,6 +247,7 @@ export default function Experience() {
 
         .eyebrow {
           font-size: 14px;
+          font-family:Poppins;
           text-transform: uppercase;
           letter-spacing: 1px;
           margin-bottom: 12px;
@@ -251,7 +255,7 @@ export default function Experience() {
         }
 
         .experience-section .intro h2 {
-          color: var(--red-dark);
+          color: black;
           font-size: 3rem;
           font-weight: 700;
           margin-bottom: 20px;
@@ -261,8 +265,9 @@ export default function Experience() {
         .experience-section .subtitle {
           font-size: 18px;
           line-height: 1.6;
-          color: var(--red-medium);
+          color: #333333;
           margin: 0;
+          font-family:Nunito
         }
 
         /* Timeline Container Layout */
@@ -302,7 +307,7 @@ export default function Experience() {
         }
 
         .experience-section .left-section {
-          border-inline-end: 3px solid var(--red-dark);
+          border-inline-end: 3px solid  #cccccc;
           align-items: flex-end;
           right: 0px;
           padding-left: 60px;
@@ -360,7 +365,7 @@ export default function Experience() {
           width: 45px;
           height: 45px;
           border-radius: 50%;
-          background: var(--red-dark);
+          background: #e8dfca;
           border: 3px solid white;
           display: flex;
           align-items: center;
@@ -389,7 +394,7 @@ export default function Experience() {
         /* Arrow pointing left from left section circles */
         .left-item .timeline-circle::after {
           border-width: 8px 12px 8px 0;
-          border-color: transparent var(--red-dark) transparent transparent;
+          border-color: transparent #6d94c5 transparent transparent;
           left: -15px; /* 3px border + 12px arrow = 15px total offset */
           top: 50%;
           transform: translateY(-50%);
@@ -403,7 +408,7 @@ export default function Experience() {
         /* Arrow pointing right from right section circles */
         .right-item .timeline-circle::after {
           border-width: 8px 0 8px 12px;
-          border-color: transparent transparent transparent var(--red-dark);
+          border-color: transparent transparent #6d94c5;
           right: -15px; /* 3px border + 12px arrow = 15px total offset */
           top: 50%;
           transform: translateY(-50%);
@@ -444,7 +449,7 @@ export default function Experience() {
         /* Arrow pointing toward left cards from their circles */
         .left-item .content-card::before {
           border-width: 10px 0 10px 15px;
-          border-color: transparent transparent transparent var(--red-dark);
+          border-color: transparent transparent transparent #6d94c5;
           right: -15px;
 
           top: 20px; /* Adjusted to align with circle position */
@@ -459,7 +464,7 @@ export default function Experience() {
         .right-item .content-card::before {
           content: "";
           border-width: 10px 15px 10px 0;
-          border-color: transparent var(--red-dark) transparent transparent;
+          border-color: transparent #6d94c5 transparent transparent;
           left: -15px;
           top: 20px; /* Adjusted to align with circle position */
         }
@@ -471,7 +476,7 @@ export default function Experience() {
         }
 
         .content-card h3 {
-          background: var(--red-dark);
+          background: #cbdceb;
           color: var(--color-white);
           font-size: 18px;
           font-weight: 600;
@@ -485,7 +490,8 @@ export default function Experience() {
         }
 
         .content-card .company {
-          background: var(--red-dark);
+              background: #cbdceb;
+
           color: var(--color-white);
           font-size: 12px;
           font-weight: 500;
@@ -523,8 +529,8 @@ export default function Experience() {
         }
 
         .content-card .skill-tag {
-          background: var(--beige-lightest);
-          color: var(--red-medium);
+          background: #cccccc;
+          color: var(--red-ediumm);
           padding: 4px 8px;
           border-radius: 6px;
           font-size: 11px;
