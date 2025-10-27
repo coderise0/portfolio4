@@ -45,8 +45,8 @@ function FooterSection() {
           </ul>
         </div>
 
-        <div className="footer-columns">
-          <div className="col">
+        <div className=" footer-columns">
+          <div className="col col-3 col-md-1 mb-6 ">
             <h6>Site Map</h6>
             <ul>
               <li>
