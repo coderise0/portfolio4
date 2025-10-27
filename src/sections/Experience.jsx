@@ -476,7 +476,7 @@ export default function Experience() {
         }
 
         .content-card h3 {
-          background: #cbdceb;
+          background: #6d94c5;
           color: var(--color-white);
           font-size: 18px;
           font-weight: 600;
@@ -490,7 +490,7 @@ export default function Experience() {
         }
 
         .content-card .company {
-              background: #cbdceb;
+              background: #6d94c5;
 
           color: var(--color-white);
           font-size: 12px;
