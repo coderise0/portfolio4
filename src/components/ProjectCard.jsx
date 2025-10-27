@@ -100,7 +100,7 @@ export default function ProjectCard({ project }) {
           border-radius: 1rem;
           box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
           overflow: hidden;
-          background: var(--terracotta-dark)
+          background:#6d94c5
         }
 
         .card-back {
@@ -162,16 +162,18 @@ export default function ProjectCard({ project }) {
           font-size: 1.3rem;
           margin-bottom: 15px;
           text-align: center;
-          color: var(--color-white);
+          color: #333333;
+          font-family: Playfair Display;
         }
 
         .project-description {
-          font-size: 0.9rem;
+          font-size: 1rem;
           line-height: 1.5;
           color: var(--color-light-gray)
           margin-bottom: 20px;
           text-align: left;
           flex-grow: 1;
+          font-Family:Nunito;
         }
 
         .technologies h4 {
@@ -218,18 +220,18 @@ export default function ProjectCard({ project }) {
 
         .btn-primary {
           background: var(--beige-light);
-          border: 2px solid var(--red-dark);
-          color: var(--red-dark);
+          border: 2px solid #dedede;
+          color: #333333;
         }
 
         .btn-primary:hover {
-          background: var(--red-dark);
-          color: var(--color-white);
+          background: #cccccc;
+          color: #333333;
           transform: translateY(-2px);
         }
 
         .btn-secondary {
-          background: transparent;
+          background: #cbdceb;
           color: var(--color-secondary-text);
           border: 2px solid var(--color-secondary-text);
         }

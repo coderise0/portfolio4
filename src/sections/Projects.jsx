@@ -144,6 +144,8 @@ export default function Projects() {
         .portfolio-section {
           padding: 50px 0;
           position: relative;
+          
+         
         }
 
         /* Add subtle background pattern */
@@ -179,6 +181,8 @@ export default function Projects() {
           padding: 0 20px;
           position: relative;
           z-index: 1;
+                 
+          
         }
 
         /* Intro Styles */
@@ -190,6 +194,7 @@ export default function Projects() {
           opacity: 0;
           transform: translateY(30px);
           animation: fadeInUp 0.8s ease-out forwards;
+          
         }
 
         @keyframes fadeInUp {
@@ -201,6 +206,7 @@ export default function Projects() {
 
         .animate-intro {
           animation-delay: 0.2s;
+          
         }
 
         .eyebrow {
@@ -210,21 +216,25 @@ export default function Projects() {
           letter-spacing: 1px;
           margin-bottom: 12px;
           font-weight: 500;
+          
         }
 
         .intro h2 {
           font-size: 3rem;
           font-weight: 700;
-          color: var(--terracotta-dark);
+          color: var( --blue-medium);
           margin-bottom: 10px;
           line-height: 1.2;
+          font-family: var(--title-main);
+          
         }
 
         .subtitle {
-          font-size: 18px;
+          font-size: 1.1rem;
           line-height: 1.6;
-          color: var(--red-medium);
+          color: var(#333333);
           margin: 0;
+          font-family: var(--body-text);
         }
 
         /* Results Info */
@@ -235,6 +245,8 @@ export default function Projects() {
           transform: translateY(20px);
           animation: fadeInUp 0.6s ease-out forwards;
           animation-delay: 0.5s;
+          
+   
         }
 
         .results-info p {
@@ -244,7 +256,7 @@ export default function Projects() {
         }
 
         .results-info strong {
-          color: var(--color-primary-text);
+          color: var(-color-primary-text-);
           font-weight: 600;
         }
 
@@ -260,11 +272,16 @@ export default function Projects() {
           opacity: 0;
           transform: translateY(50px) scale(0.95);
           transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+          
+          
         }
+          
 
         .portfolio-item.animate-in {
           opacity: 1;
           transform: translateY(0) scale(1);
+          background: linear-gradient(135deg, #dfe0ff 0%, #f8f8ff 100%);
+          
         }
 
         /* Portfolio Actions */
@@ -272,6 +289,7 @@ export default function Projects() {
           display: flex;
           justify-content: center;
           margin-top: 10px;
+          
         }
 
         .btn-view-more {

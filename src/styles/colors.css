@@ -78,7 +78,8 @@
   }
 
   section.projects {
-    background-color: var(--cream-medium);
+    background-color: var(--color-white) ;
+   
   }
 
 
