@@ -1,7 +1,10 @@
 #testimonials{
   background-color: #cbdceb;
-   padding: 50px;
-  margin: 2px 2px 5px 3px;
+  width: 100vw;       
+  max-width: 100%;
+  padding: 50px 20px; 
+  margin: 0;      
+  box-sizing: border-box;
 }
 
 
@@ -51,14 +54,18 @@ p {
 p span {
   color: #6d94c5;
   text-shadow: #333333;
+  
 }
-
-.card {
-  width: 100%;
-  min-height: 2px;
-  height: 50px;
+.card{
+ width: 100%;     
+  height: auto;   
+  min-height: auto;
+  transition: transform 0.3s ease, box-shadow 0.7s ease;
+  border: none !important;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  box-sizing: border-box;
 }
-
 .testimonial-img {
   width: 110px;
   height: 110px;
@@ -67,11 +74,7 @@ p span {
   margin: 20px auto 10px;
   padding-top: 0;
 }
-.card {
-  transition: transform 0.3s ease, box-shadow 0.7s ease;
-  border: none !important;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-}
+
 
 .card:hover {
   transform: translateY(-8px);
