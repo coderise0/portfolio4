@@ -2,6 +2,7 @@ import "../styles/Footer.css";
 import logo from "../styles/Logo.jpg";
 import { FaLinkedin, FaGithub, FaTwitter } from "react-icons/fa";
 
+
 function FooterSection() {
   return (
     <footer className="footer">
@@ -107,7 +108,7 @@ function FooterSection() {
             <h6>Legal</h6>
             <ul>
               <li>
-                <a href="-"> Privacy Policy</a>
+                <a href=""> Privacy Policy</a>
               </li>
               <li>
                 <a href="">Terms of Service</a>
@@ -120,7 +121,7 @@ function FooterSection() {
       <div className="footer-bottom">
         <p>
           © 2025 Khaled Alahmad. All rights reserved. |
-          <a href="#"> Privacy Policy</a> |<a href="#"> Terms of Service</a>
+          <a href=""> Privacy Policy</a> |<a href="#"> Terms of Service</a>
         </p>
       </div>
     </footer>
