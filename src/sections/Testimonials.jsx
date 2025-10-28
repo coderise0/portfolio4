@@ -12,12 +12,12 @@ export default function Testimonials() {
   }, []);
 
   return (
-    <div id="testimonials" className="container my-5">
+    <div id="testimonials" className="container my-9">
       <h5 className="text-center text-secondary">Happy Customers</h5>
       <h1 className="text-center mb-4">Testimonials</h1>
       <p className="text-center mb-5">
         Authentic testimonials from incredible clients and co-workers who
-        trusted me with their digital dreams.
+        trusted me with their digital dreams.<br/>
         <span> Building relationships through exceptional work</span>
       </p>
 

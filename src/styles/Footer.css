@@ -1,39 +1,45 @@
 .footer {
   background-color: #f5efe6;
   color: #000000;
-  padding: 50px 80px 20px;
-  font-family: "Arial", sans-serif;
-  position: relative;
-  bottom: -80px;
-  width: 100%;
+  padding: 50px 20px 20px;
+ width: 100%;
+  box-sizing: border-box;
 }
 
 .footer-container {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  max-width: 1200px; 
+  margin: 0 auto;
+  gap: 2px; 
 }
 
 .footer-left {
   max-width: 300px;
+  flex: 1;
+  min-width: 250px;
 }
 
 .footer-logo {
   width: 150px;
   height: 100px;
   border-radius: 50%;
+  object-fit: cover;
 }
 
 .footer-name {
   margin-top: 15px;
   font-size: 20px;
   font-weight: bold;
+   font-family: 'Playfair Display';
 }
 
 .footer-description {
   font-size: 15px;
   margin-top: 10px;
   color: #333333;
+font-family: 'Nunito';
 }
 
 .footer-address {
@@ -41,6 +47,7 @@
   font-size: 14px;
   font-weight: 500;
   color: #333333;
+  font-family: 'Nunito';
 }
 
 .social-links2 {
@@ -61,52 +68,60 @@
   color: #6d94c5;
 }
 
+
 .footer-columns {
   display: flex;
-  gap: 50px;
+  justify-content:end;
+  flex: 2;
+  gap: 0px;
+  margin-top: 50px;
   flex-wrap: wrap;
+  margin-left: 50px;
 }
 
 .footer-columns .col {
-  font-size: 16px;
-  font-weight: 500;
-  margin-bottom: 15px;
-  margin-right: -20px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 150px;
+ margin-left: 130px;
+
 }
+
 .footer-columns .col h6 {
-  font-size: 16px;
-  font-weight: 500;
-  margin-top: 50px;
+  font-size:1.2rem;
+  font-weight: 600;
+  margin-bottom: 12px;
+  font-family: 'Poppin';
+  gap:19px;
 }
 
 .footer-columns .col ul {
   list-style: none;
-  padding: 2px;
-}
-
-.footer-columns .col ul li {
-  margin-bottom: 8px;
+  padding: 0;
+  margin: 0;
+  font-family: 'Nunito';
+  
 }
 
 .footer-columns .col ul li a {
   text-decoration: none;
   color: #333333;
-  font-size: 14px;
+  font-size: 0.875rem;
   transition: 0.3s;
+
 }
 
 .footer-columns .col ul li a:hover {
   color: #2d7ddf;
-
-  font-weight: 400px;
 }
 
 .footer-bottom p {
   text-align: center;
   margin-top: 40px;
-  border-top: 1px solid rgba(255, 255, 255, 0.3);
-  padding-top: 80px;
-  font-size: 15px;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  padding-top: 20px;
+  font-size:  0.875rem;
 }
 
 .footer-bottom a {
@@ -117,4 +132,39 @@
 
 .footer-bottom a:hover {
   color: #222;
+}
+
+
+@media (max-width: 1024px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 30px;
+  }
+
+  .footer-columns {
+    justify-content: center;
+    gap: 40px;
+  }
+
+  .footer-left {
+    max-width: 100%;
+  }
+}
+@media (max-width: 768px) {
+  .footer-columns {
+    flex-direction: row; 
+    justify-content: center;
+    gap: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-columns {
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    text-align: center;
+  }
 }

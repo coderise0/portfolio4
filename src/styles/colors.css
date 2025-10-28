@@ -74,11 +74,12 @@
   }
 
   section.experience {
-    background-color: var(--beige-light);
+    background-color: var(--cream-lightest);
   }
 
   section.projects {
-    background-color: var(--cream-medium);
+    background-color: var(--color-white) ;
+   
   }
 
 

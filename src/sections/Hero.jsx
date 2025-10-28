@@ -57,18 +57,15 @@ const Hero = () => {
             </p>
 
             <button>
-              <a
-                href="public/images.svg/full-stack-developer.png"
-                download="Khaled_Ahmed_CV.pdf"
-              >
-                Download CV
-              </a>
+          <a href="/public/Khaled_Ahmed_CV .pdf" download="Khaled_Ahmed_CV .pdf">
+                  Download CV
+             </a>
             </button>
           </div>
 
           <div className="div2">
             <img
-              src="public\images.svg\istockphoto-1399565382-612x612.png"
+              src="/public/images.svg/photoq.jpg"
               alt=""
             />
           </div>

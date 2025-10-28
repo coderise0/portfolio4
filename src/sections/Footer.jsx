@@ -46,12 +46,12 @@ function FooterSection() {
           </ul>
         </div>
 
-        <div className="footer-columns">
-          <div className="col">
+        <div className=" footer-columns">
+          <div className="col col-3 col-md-1 mb-6 ">
             <h6>Site Map</h6>
             <ul>
               <li>
-                <a href="#hero">Home</a>
+                <a href="">Home</a>
               </li>
               <li>
                 <a href="#about">About Me</a>
