@@ -15,7 +15,7 @@ const Hero = () => {
         <nav>
           <ul>
             <li>
-              <a href="#hero">home</a>
+              <a href="#">home</a>
             </li>
             <li>
               <a href="#about">About Me</a>
@@ -24,10 +24,10 @@ const Hero = () => {
               <a href="#skills">Skills</a>
             </li>
             <li>
-              <a href="#projects">My Projects</a>
+              <a href="#experience">Experience</a>
             </li>
             <li>
-              <a href="#experience">Experience</a>
+              <a href="#projects">My Projects</a>
             </li>
             <li>
               <a href="#testimonials">Testimonials</a>

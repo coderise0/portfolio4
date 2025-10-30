@@ -1,7 +1,7 @@
 import "../styles/Footer.css";
 import logo from "../styles/Logo.jpg";
 import { FaLinkedin, FaGithub, FaTwitter } from "react-icons/fa";
-
+import { Link } from "react-router-dom";
 
 function FooterSection() {
   return (
@@ -51,7 +51,7 @@ function FooterSection() {
             <h6>Site Map</h6>
             <ul>
               <li>
-                <a href="">Home</a>
+                <a href="#">Home</a>
               </li>
               <li>
                 <a href="#about">About Me</a>
@@ -108,10 +108,10 @@ function FooterSection() {
             <h6>Legal</h6>
             <ul>
               <li>
-                <a href=""> Privacy Policy</a>
+                <a href="/privacy-policy"> Privacy Policy</a>
               </li>
               <li>
-                <a href="">Terms of Service</a>
+                <a href="/terms-of-service">Terms of Service</a>
               </li>
             </ul>
           </div>
@@ -121,7 +121,7 @@ function FooterSection() {
       <div className="footer-bottom">
         <p>
           © 2025 Khaled Alahmad. All rights reserved. |
-          <a href=""> Privacy Policy</a> |<a href="#"> Terms of Service</a>
+          <a href="/privacy-policy"> Privacy Policy</a> |<a href="/terms-of-service"> Terms of Service</a>
         </p>
       </div>
     </footer>
