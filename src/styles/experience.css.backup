@@ -130,6 +130,16 @@
   position: relative;
 }
 
+.year {
+          color: #222 !important;
+          font-size: 11px;
+          font-weight: bold;
+          line-height: 1;
+        }
+
+
+
+
 /* Left side items */
 .timeline-row.left .headline-bar {
   grid-column: 1;

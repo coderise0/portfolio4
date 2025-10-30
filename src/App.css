@@ -10,7 +10,6 @@ body {
   color: #222;
   transition: background 0.3s ease;
   overflow-x: hidden;
-  
 }
 
 ul {
@@ -22,9 +21,9 @@ a {
 }
 
 .herosection .header {
-
- position:fixed;
-  z-index: 1000; 
+  position: fixed;
+  top: 0;
+  z-index: 1000;
   margin: 0 auto;
   display: flex;
   align-items: center;
@@ -37,7 +36,6 @@ a {
 
   box-shadow: 0 1px 5px rgba(85, 85, 85, 0.333);
 }
-
 
 .herosection .header nav ul {
   display: flex;
@@ -72,7 +70,6 @@ a {
 
 .herosection .header nav ul li {
   position: relative;
-
 }
 
 .herosection .header nav ul li a {
@@ -82,7 +79,7 @@ a {
   font-weight: 500;
   padding: 10px 20px;
   display: block;
-   font-family: 'Nunito';
+  font-family: "Nunito";
   transition: all 0.3s ease;
   margin-left: 0px;
   border-radius: 12px;
@@ -201,16 +198,14 @@ main .dis {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  margin-top: 1.5rem;
+  margin-bottom: 20px;
   flex-wrap: wrap;
   animation: fadeIn 1s ease-in-out;
-  
 }
 
 main .dis .div1 {
   width: 600px;
   margin-top: 12rem;
- 
 }
 
 /* ===== Typing Effect for H1 ===== */
@@ -220,7 +215,7 @@ main .dis .div1 h1 {
   white-space: nowrap;
   width: 0;
   animation: typing 4s steps(40) 0.5s forwards, blink 0.75s step-end infinite;
-  font-family: 'Playfair Display';
+  font-family: "Playfair Display";
   font-size: 3rem;
   color: rgba(173, 147, 3, 0.849);
 }
@@ -271,7 +266,7 @@ main .dis .div1 p {
   font-size: 1.25rem;
   padding-left: 20px;
   text-transform: capitalize;
-    font-family:Nunito;
+  font-family: Nunito;
   font-size: 1.25rem;
   margin-bottom: 25px;
   width: 550px;
@@ -345,7 +340,7 @@ main .div2 img {
   height: 450px;
   width: 550px;
   object-fit: cover;
-  margin-top: 140px;
+  margin-top: 15rem;
 }
 
 /* ===== Animation ===== */
@@ -479,7 +474,6 @@ main .div2 img {
   main .dis .div1 p {
     width: 100%;
     padding-left: 0;
-    
   }
 
   main .dis .div1 button {

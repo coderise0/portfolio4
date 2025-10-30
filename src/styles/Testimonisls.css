@@ -1,12 +1,11 @@
-#testimonials{
+#testimonials {
   background-color: #cbdceb;
-  width: 100vw;       
+  width: 100vw;
   max-width: 100%;
-  padding: 50px 20px; 
-  margin: 0;      
+  padding: 50px 20px;
+  margin: 0;
   box-sizing: border-box;
 }
-
 
 h1 {
   font-family: "Playfair Display";
@@ -47,24 +46,25 @@ h6.card-subtitle {
 p {
   font-family: "Nunito";
   font-weight: 300;
-  font-size:  1.50rem;
+  font-size: 1.5rem;
   line-height: 160%;
   color: #333333;
 }
 p span {
   color: #6d94c5;
   text-shadow: #333333;
-  
 }
-.card{
- width: 100%;     
-  height: auto;   
+.card {
+  width: 80%;
+  margin: 0 auto;
+  height: auto;
   min-height: auto;
   transition: transform 0.3s ease, box-shadow 0.7s ease;
   border: none !important;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
   margin-bottom: 20px;
   box-sizing: border-box;
+  border-radius: 15px;
 }
 .testimonial-img {
   width: 110px;
@@ -75,16 +75,15 @@ p span {
   padding-top: 0;
 }
 
-
 .card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 0 25px rgba(0, 50, 120, 0.6) !important;
+  box-shadow: 0 0 25px rgba(0, 50, 120, 0.3) !important;
 }
 
 .card-title {
   font-size: 20px;
   text-shadow: #6d94c5;
 }
-.card-text{
-  font-size:  1.25rem;
+.card-text {
+  font-size: 1.25rem;
 }

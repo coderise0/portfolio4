@@ -33,7 +33,9 @@ const Hero = () => {
               <a href="#testimonials">Testimonials</a>
             </li>
             <li>
-              <a href="#contact">Contact</a>
+              <a className="Contact" href="#contact">
+                Contact
+              </a>
             </li>
           </ul>
         </nav>
@@ -57,17 +59,17 @@ const Hero = () => {
             </p>
 
             <button>
-          <a href="/public/Khaled_Ahmed_CV .pdf" download="Khaled_Ahmed_CV .pdf">
-                  Download CV
-             </a>
+              <a
+                href="/public/Khaled_Ahmed_CV .pdf"
+                download="Khaled_Ahmed_CV .pdf"
+              >
+                Download CV
+              </a>
             </button>
           </div>
 
           <div className="div2">
-            <img
-              src="/public/images.svg/photoq.jpg"
-              alt=""
-            />
+            <img src="/public/images.svg/photoq.jpg" alt="" />
           </div>
         </div>
       </main>

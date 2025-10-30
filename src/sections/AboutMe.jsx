@@ -6,7 +6,6 @@ function AboutMe() {
       <h2>About Me</h2>
 
       <div className="top-section">
-      
         <div className="left-section">
           <img
             src="/public/images.svg/photo2.jpg"
@@ -15,12 +14,11 @@ function AboutMe() {
           />
           <p className="bottom-paragraph">
             Outside of development, I enjoy photography, digital art, and
-            exploring new trends in web design to keep my skills up-to-date
-            and inspired.
+            exploring new trends in web design to keep my skills up-to-date and
+            inspired.
           </p>
         </div>
 
-       
         <div className="right-section">
           <h3>Khaled Ahmad</h3>
           <p className="text">
@@ -32,7 +30,10 @@ function AboutMe() {
             experimenting with UI/UX principles to make websites intuitive and
             engaging. I am always eager to learn new tools and frameworks, and I
             enjoy collaborating on projects that challenge me to grow both
-            technically and creatively.
+            technically and creatively. I take pride in writing clean,
+            maintainable code and delivering solutions that truly add value to
+            users. My goal is to continue evolving as a developer while
+            contributing to innovative and impactful digital experiences.
           </p>
         </div>
       </div>

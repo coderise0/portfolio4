@@ -4,13 +4,9 @@ import timelineItems from "../data/experience.json";
 // Custom timeline with separated left and right sections
 // Even indexed items (0,2,4...) on left, Odd indexed items (1,3,5...) on right
 
-
 export default function Experience() {
-
-
-  const [visibleItems, setVisibleItems] = useState(new Set())
-  const timelineRef = useRef(null)
-
+  const [visibleItems, setVisibleItems] = useState(new Set());
+  const timelineRef = useRef(null);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -36,10 +32,8 @@ export default function Experience() {
   }, []);
 
   return (
-
     <section className="experience-section" id="experience">
-      <div className="container" style={{background: 'transparent'}}>
-
+      <div className="container" style={{ background: "transparent" }}>
         {/* Intro Section */}
         <div className="intro animate-intro">
           <p className="eyebrow">Work Experience</p>
@@ -195,20 +189,18 @@ export default function Experience() {
       <style jsx>{`
         main.container {
           widtth: 88%;
-          
         }
         /* Experience Section Styles */
         .experience-section {
           padding: 80px 0;
-          background:#dedede;
+          background: #dedede;
         }
 
         .container {
           max-width: 1200px; /* Reduced from 1300px */
           width: 90%; /* Increased to 90% for more space */
           margin: 0 auto;
-           padding: 0 60px;
-           
+          padding: 0 60px;
         }
 
         /* Mobile first approach */
@@ -247,7 +239,7 @@ export default function Experience() {
 
         .eyebrow {
           font-size: 14px;
-          font-family:Poppins;
+          font-family: Poppins;
           text-transform: uppercase;
           letter-spacing: 1px;
           margin-bottom: 12px;
@@ -267,7 +259,7 @@ export default function Experience() {
           line-height: 1.6;
           color: #333333;
           margin: 0;
-          font-family:Nunito
+          font-family: Nunito;
         }
 
         /* Timeline Container Layout */
@@ -307,7 +299,7 @@ export default function Experience() {
         }
 
         .experience-section .left-section {
-          border-inline-end: 3px solid  #cccccc;
+          border-inline-end: 3px solid #cccccc;
           align-items: flex-end;
           right: 0px;
           padding-left: 60px;
@@ -415,7 +407,7 @@ export default function Experience() {
         }
 
         .year {
-          color: white;
+          color: #646464ff;
           font-size: 11px;
           font-weight: bold;
           line-height: 1;
@@ -490,7 +482,7 @@ export default function Experience() {
         }
 
         .content-card .company {
-              background: #6d94c5;
+          background: #6d94c5;
 
           color: var(--color-white);
           font-size: 12px;
@@ -684,4 +676,3 @@ export default function Experience() {
     </section>
   );
 }
-

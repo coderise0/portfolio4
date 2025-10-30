@@ -50,7 +50,6 @@ function ContactForm() {
           maxWidth: "3000px",
         }}
       >
-        
         <div
           style={{
             flex: 1,
@@ -59,53 +58,54 @@ function ContactForm() {
             padding: "20px",
           }}
         >
-      <h2
-  style={{
-    fontFamily: "Playfair Display",
-    fontSize: "2.5rem",
-    color: "#6d94c5",
-    marginBottom: "15px",
-    textAlign: "center",
-  }}
->
-  Let’s Connect 🤝
-</h2>
-<p
-  style={{
-    fontSize: "1.1rem",
-    lineHeight: "1.7",
-    textAlign: "center",
-    marginBottom: "10px",
-  }}
->
-  Have any questions, ideas, or opportunities?  
-  <br />I’d love to hear from you! Whether it’s a collaboration,  
-  a project inquiry, or just a friendly hello —  
-  feel free to reach out anytime.
-</p>
+          <h2
+            style={{
+              fontFamily: "Playfair Display",
+              fontSize: "2.5rem",
+              color: "#6d94c5",
+              marginBottom: "15px",
+              textAlign: "center",
+            }}
+          >
+            Let’s Connect 🤝
+          </h2>
+          <p
+            style={{
+              fontSize: "1.1rem",
+              lineHeight: "1.7",
+              textAlign: "center",
+              marginBottom: "10px",
+            }}
+          >
+            Have any questions, ideas, or opportunities?
+            <br />
+            I’d love to hear from you! Whether it’s a collaboration, a project
+            inquiry, or just a friendly hello — feel free to reach out anytime.
+          </p>
 
-<p
-  style={{
-    marginTop: "20px",
-    fontSize: "1rem",
-    color: "#666",
-    textAlign: "center",
-  }}
->
-  📧 Email me directly at:
-  <br />
-  <strong style={{ color: "#6d94c5" }}>KHaledalahmad@gmail.com</strong>
-</p>
+          <p
+            style={{
+              marginTop: "20px",
+              fontSize: "1rem",
+              color: "#666",
+              textAlign: "center",
+            }}
+          >
+            📧 Email me directly at:
+            <br />
+            <strong style={{ color: "#6d94c5" }}>
+              KHaledalahmad@gmail.com
+            </strong>
+          </p>
 
-<hr
-  style={{
-    width: "50%",
-    margin: "15px auto",
-    borderTop: "2px solid #6d94c5",
-    opacity: 0.3,
-  }}
-/>
-
+          <hr
+            style={{
+              width: "50%",
+              margin: "15px auto",
+              borderTop: "2px solid #6d94c5",
+              opacity: 0.3,
+            }}
+          />
         </div>
 
         <form
@@ -116,11 +116,10 @@ function ContactForm() {
             backgroundColor: "#f5efe6",
             borderRadius: "14px",
             padding: "25px 40px",
-            boxShadow: "0 8px 20px rgba(0,0,0,0.1)",
+            boxShadow: "0 2px 6px rgba(0,0,0,0.15)",
             display: "flex",
             flexDirection: "column",
             gap: "12px",
-          
           }}
         >
           <h2
