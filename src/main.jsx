@@ -24,7 +24,7 @@ AOS.init({ duration: 800, once: true });
 createRoot(document.getElementById("root")).render(
   <StrictMode>
     <BrowserRouter>
-      <Routes>
+            <Routes>
         {/* Home page with all sections */}
         <Route path="/" element={
           <>
@@ -42,12 +42,14 @@ createRoot(document.getElementById("root")).render(
             <FooterSection />
           </>
         } />
+
         
         {/* Privacy Policy page */}
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         
         {/* Terms of Service page */}
         <Route path="/terms-of-service" element={<TermsOfService />} />
+       
       </Routes>
     </BrowserRouter>
   </StrictMode>

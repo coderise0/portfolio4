@@ -1,7 +1,7 @@
 import "../styles/Footer.css";
 import logo from "../styles/Logo.jpg";
 import { FaLinkedin, FaGithub, FaTwitter } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import { HashLink as Link } from 'react-router-hash-link';
 
 function FooterSection() {
   return (
@@ -50,24 +50,13 @@ function FooterSection() {
           <div className="col col-3 col-md-1 mb-6 ">
             <h6>Site Map</h6>
             <ul>
-              <li>
-                <a href="#">Home</a>
-              </li>
-              <li>
-                <a href="#about">About Me</a>
-              </li>
-              <li>
-                <a href="#skills">Skills</a>
-              </li>
-              <li>
-                <a href="#experience">Experience</a>
-              </li>
-              <li>
-                <a href="#projects">Projects</a>
-              </li>
-              <li>
-                <a href="#contact">Contact</a>
-              </li>
+                     <li><Link smooth to="/#home">Home</Link></li>
+          <li><Link smooth to="/#about">About Me</Link></li>
+          <li><Link smooth to="/#skills">Skills</Link></li>
+          <li><Link smooth to="/#experience">Experience</Link></li>
+          <li><Link smooth to="/#projects">Projects</Link></li>
+          <li><Link smooth to="/#testimonials">Testimonials</Link></li>
+          <li><Link smooth to="/#contact" className="Contact">Contact</Link></li>
             </ul>
           </div>
 

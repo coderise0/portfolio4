@@ -1,6 +1,6 @@
 import React from "react";
 import "../App.css";
-
+import { HashLink as Link } from 'react-router-hash-link';
 const Hero = () => {
   return (
     <section id="home" className="herosection">
@@ -14,27 +14,13 @@ const Hero = () => {
 
         <nav>
           <ul>
-            <li>
-              <a href="#">home</a>
-            </li>
-            <li>
-              <a href="#about">About Me</a>
-            </li>
-            <li>
-              <a href="#skills">Skills</a>
-            </li>
-            <li>
-              <a href="#experience">Experience</a>
-            </li>
-            <li>
-              <a href="#projects">My Projects</a>
-            </li>
-            <li>
-              <a href="#testimonials">Testimonials</a>
-            </li>
-            <li>
-              <a href="#contact">Contact</a>
-            </li>
+           <li><Link smooth to="/#home">Home</Link></li>
+          <li><Link smooth to="/#about">About Me</Link></li>
+          <li><Link smooth to="/#skills">Skills</Link></li>
+          <li><Link smooth to="/#experience">Experience</Link></li>
+          <li><Link smooth to="/#projects">Projects</Link></li>
+          <li><Link smooth to="/#testimonials">Testimonials</Link></li>
+          <li><Link smooth to="/#contact" className="Contact">Contact</Link></li>
           </ul>
         </nav>
       </header>
@@ -57,17 +43,17 @@ const Hero = () => {
             </p>
 
             <button>
-          <a href="/public/Khaled_Ahmed_CV .pdf" download="Khaled_Ahmed_CV .pdf">
-                  Download CV
-             </a>
+              <a
+                href="/public/Khaled_Ahmed_CV .pdf"
+                download="Khaled_Ahmed_CV .pdf"
+              >
+                Download CV
+              </a>
             </button>
           </div>
 
           <div className="div2">
-            <img
-              src="/public/images.svg/photoq.jpg"
-              alt=""
-            />
+            <img src="/public/images.svg/photoq.jpg" alt="" />
           </div>
         </div>
       </main>
